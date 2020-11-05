@@ -1,0 +1,455 @@
+//Level based filters. Add double slash // in front of each line you want to disable. This means you'll always see these pots. Minor to Super, HP to Mana.
+//Hide health pots from minor to grand, depending on level
+ItemDisplay[hp1 CLVL>10]:
+ItemDisplay[hp2 CLVL>15]:
+ItemDisplay[hp3 CLVL>20]:
+ItemDisplay[hp4 CLVL>35]:
+
+//Same as above but for mana
+ItemDisplay[mp1 CLVL>10]:
+ItemDisplay[mp2 CLVL>15]:
+ItemDisplay[mp3 CLVL>25]:
+ItemDisplay[mp4 CLVL>35]:
+
+//Shorten item names, ignore junk
+ItemDisplay[tsc CLVL>29]:
+ItemDisplay[isc CLVL>29]:
+ItemDisplay[tsc]: %GREEN%-%WHITE%TP%GREEN%-
+ItemDisplay[isc]: %GREEN%-%WHITE%ID%GREEN%-
+ItemDisplay[key]: %YELLOW%-%WHITE%Key%YELLOW%-
+ItemDisplay[vps CLVL<12]: %NAME% //Show stamina below lvl 12
+ItemDisplay[vps]: //Ignore stamina potions
+ItemDisplay[yps]: %GREEN%-%WHITE%Antidote%GREEN%-
+ItemDisplay[wms]: //Ignore Thawing potion
+ItemDisplay[gps]: //Ignore Rancid Gas potion
+ItemDisplay[ops]: //Ignore Oil potion
+ItemDisplay[gpm]: //Ignore Choking Gas potion
+ItemDisplay[opm]: //Ignore Exploding potion
+ItemDisplay[gpl]: //Ignore Strangling Gas potion
+ItemDisplay[opl]: //Ignore Fulminating potion
+
+//Shorten Potion names
+ItemDisplay[hp1]: %RED%H%WHITE%1
+ItemDisplay[hp2]: %RED%H%WHITE%2
+ItemDisplay[hp3]: %RED%H%WHITE%3
+ItemDisplay[hp4]: %RED%H%WHITE%4
+ItemDisplay[hp5]: %RED%H%WHITE%5
+ItemDisplay[mp1]: %BLUE%M%WHITE%1
+ItemDisplay[mp2]: %BLUE%M%WHITE%2
+ItemDisplay[mp3]: %BLUE%M%WHITE%3
+ItemDisplay[mp4]: %BLUE%M%WHITE%4
+ItemDisplay[mp5]: %BLUE%M%WHITE%5
+ItemDisplay[rvs]: %PURPLE%R%WHITE%1
+ItemDisplay[rvl]: %PURPLE%R%WHITE%2
+
+//Hide arrows and bolts
+ItemDisplay[aqv]:
+ItemDisplay[cqv]:
+
+//Ignore small gold stacks, progressive system.
+ItemDisplay[CLVL>19 CLVL<40 GOLD<20]:
+ItemDisplay[CLVL>39 CLVL<60 GOLD<50]:
+ItemDisplay[CLVL>59 CLVL<80 GOLD<1000]:
+ItemDisplay[CLVL>79 GOLD<2000]:
+
+
+//Gems - Hide low gems depending on your character lvl and make gems name shorter
+ItemDisplay[GEM=1 CLVL>14]:
+ItemDisplay[GEM=2 CLVL>23]:
+ItemDisplay[GEM=3 CLVL>29]:
+
+ItemDisplay[gcv OR gcw OR gcg OR gcr OR gcb OR skc OR gcy]: %WHITE%C- %CONTINUE%
+ItemDisplay[gfv OR gfw OR gfg OR gfr OR gfb OR skf OR gfy]: %BLUE%F- %CONTINUE%
+ItemDisplay[gsv OR gsw OR gsg OR gsr OR gsb OR sku OR gsy]: %YELLOW%N- %CONTINUE%
+ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR skl OR gly) OR GEM=4]: %GREEN%F+ %CONTINUE%
+ItemDisplay[(gpv OR gpw OR gpg OR gpr OR gpb OR skz OR gpy) OR GEM=5]: %PURPLE%P+ %CONTINUE%
+
+ItemDisplay[GEMTYPE=1]: %NAME%%ORANGE%Amethyst //Amethysts
+ItemDisplay[GEMTYPE=2]: %NAME%%ORANGE%Diamond //Diamonds
+ItemDisplay[GEMTYPE=3]: %NAME%%ORANGE%Emerald //Emeralds
+ItemDisplay[GEMTYPE=4]: %NAME%%ORANGE%Ruby //Rubies
+ItemDisplay[GEMTYPE=5]: %NAME%%ORANGE%Sapphire //Sapphires
+ItemDisplay[GEMTYPE=6]: %NAME%%ORANGE%Topaze //Topazes
+ItemDisplay[GEMTYPE=7]: %NAME%%ORANGE%Skull //Skulls
+
+ItemDisplay[GEM>0 QTY>1]: %NAME% x%QTY%%CONTINUE% // Shows the quantity of gems in a stack
+
+// ItemDisplay[GEM=1]: %WHITE%C- %NAME%%CONTINUE%
+// ItemDisplay[GEM=2]: %BLUE%F- %NAME%%CONTINUE%
+// ItemDisplay[GEM=3]: %YELLOW%N- %NAME%%CONTINUE%
+// ItemDisplay[GEM=4]: %ORANGE%F+ %NAME%%CONTINUE%
+// ItemDisplay[GEM=5]: %NAME%%PURPLE%P+ %CONTINUE%
+
+
+
+//Display prettier runes with rune number in name
+ItemDisplay[RUNE<14]: %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																									//el-shael
+ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%												//dol-fal
+ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¤¤%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¤¤%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
+ItemDisplay[RUNE>22]: %PURPLE%¤¤%RED%¤¤ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RUNENAME% %RED%¤¤%PURPLE%¤¤%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%		//mal-zod
+ItemDisplay[RUNE>0 QTY>0]: %NAME% x%QTY%%CONTINUE% 																													// Shows the quantity of runes in a stack
+
+//Hide inferior items for level 6 and above
+ItemDisplay[CLVL>5 INF]:
+
+//Append sockets and [eth] to socketed/eth items
+ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
+ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
+
+
+ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-B%%CONTINUE%
+ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-E%%CONTINUE%
+ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
+
+
+
+
+// ----------------------------
+// [QUES] Quest Items
+// ----------------------------
+// -----------------------------
+// [QIA1] Act 1
+// -----------------------------
+ItemDisplay[hdm]: %NAME%%MAP-00%{%TAN%Give to Charsi in Act 1} // Horadric Malus
+ItemDisplay[bks]: %NAME%%MAP-00%{%TAN%Talk to Akara in Act 1%NL%} // Scroll of Inifuss
+ItemDisplay[bkd]: %NAME%%MAP-00%{%TAN%Go to Act 1: Stony Field%NL%} // Scroll of Inifuss, deciphered
+ItemDisplay[leg]: %NAME%%MAP-00%{%TAN%This is the key to %PURPLE%Moo %GREEN%Moo %YELLOW%Land!%NL%%TAN%Full of mysteries...} // Wirt's Leg
+
+// ------------------------------------------------------------------------------
+// [QIA2] Act 2
+// ------------------------------------------------------------------------------
+ItemDisplay[ass]: %NAME%%MAP-00%{%TAN%Right click for +1 Skill Point%NL%} // Book of Skill
+ItemDisplay[tr1]: //%NAME%{%TAN%Not required%NL%} // Horadric Scroll
+ItemDisplay[box]: %NAME%%MAP-0C% // Horadric Cube
+ItemDisplay[hst]: %NAME%%MAP-00%{%TAN%Use in Tomb Orifice in Act 2: Tal Rashas Tomb} // Horadric Staff
+ItemDisplay[msf]: %NAME%%MAP-00%{%TAN%Cube w/ Amulet of the Viper} // Staff of Kings
+ItemDisplay[vip]: %NAME%%MAP-00%{%TAN%Cube w/ Staff of Kings} // Amulet of the Viper
+
+// ------------------------------------------------------------------------------
+// [QIA3] Act 3
+// ------------------------------------------------------------------------------
+ItemDisplay[j34]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim%WHITE%: %TAN%World of fetch quests V%NL%} // A Jade Figurine
+ItemDisplay[g33]: %NAME%%MAP-00%{%TAN%Give to Ormus in Act 3 to get about 2000 gold%NL%} // Gidbinn
+ItemDisplay[qbr]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim 2%WHITE%!%NL%} // Khalim's Brain
+ItemDisplay[qey]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim 2%WHITE%!%NL%} // Khalim's Eye
+ItemDisplay[qhr]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim 2%WHITE%!%NL%} // Khalim's Heart
+ItemDisplay[qf1]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim 2%WHITE%!%NL%} // Khalim's Flail
+ItemDisplay[qf2]: %NAME%%MAP-00%{%RED%Skyrim 2 %TAN%is coming to an end.%NL%%TAN%Break the orb and go kill the bandit chief!} // Khalim's Will
+ItemDisplay[bbb]: %NAME%%MAP-00%{%TAN%Give to Alkor for +5 Stat Points%NL%} // Lam Esen's Tome
+ItemDisplay[mss]: %NAME%%MAP-00%{%TAN%Take to the Hellforge in Act 4: River of Flame%NL%} // Mephisto's Soulstone
+ItemDisplay[xyz]: %NAME%%MAP-00%{%TAN%Right click for a permanent +20 to Life%NL%} // Potion of Life
+ItemDisplay[g34]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim%WHITE%: %TAN%World of fetch quests V%NL%} // The Golden Bird
+
+// ------------------------------------------------------------------------------
+// [QIA4] Act 4
+// ------------------------------------------------------------------------------
+ItemDisplay[hfh]: %NAME%%MAP-00%{%TAN%Hit Hellforge in Act 4: River of Flame} // Hellforge Hammer
+
+// ------------------------------------------------------------------------------
+// [QIA5] Act 5
+// ------------------------------------------------------------------------------
+ItemDisplay[ice]: %NAME%%MAP-00%{%TAN%Typical Skyrim quest!} // Malah's Potion
+ItemDisplay[tr2]: %NAME%%MAP-00%{%TAN%Right click for a permanent All Resistances +10%NL%} // Scroll of Resistance
+
+// ------------------------------------------------------------------------------
+// [QIES] Essences
+// ------------------------------------------------------------------------------
+ItemDisplay[tes]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with ghostly boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Twisted Essence of Suffering
+ItemDisplay[ceh]: %ORANGE%%NAME%%MAP-00%{%TAN%This is ghostly boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Charged Essence of Hatred
+ItemDisplay[bet]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Burning Essence of Terror
+ItemDisplay[fed]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%angry boy's essence.%NL%} // Festering Essence of Destruction
+
+// ------------------------------------------------------------------------------
+// [QITO] Tokens
+// ------------------------------------------------------------------------------
+ItemDisplay[toa]: %ORANGE%%NAME%%MAP-68%{%TAN%Right click to reset stats & skills%NL%} // Token of Absolution
+
+// ------------------------------------------------------------------------------
+// [QIKE] Pandemonium Keys
+// ------------------------------------------------------------------------------
+ItemDisplay[pk3]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
+ItemDisplay[pk2]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
+ItemDisplay[pk1]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
+
+// ------------------------------------------------------------------------------
+// [QIOR] Pandemonium Organs
+// ------------------------------------------------------------------------------
+ItemDisplay[bey]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
+ItemDisplay[dhn]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
+ItemDisplay[mbr]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
+
+// +----------------------------------------------------------------------------+
+// |                                                                            |
+// |     [PD2N] Map Items                                                       |
+// |                                                                            |
+// +----------------------------------------------------------------------------+
+// ------------------------------------------------------------------------------
+// [CORR] Corruption Items
+// ------------------------------------------------------------------------------
+ItemDisplay[wss]: %PURPLE%+%RED%%NAME%%MAP-62% // Worldstone Shard
+ItemDisplay[lbox]: %PURPLE%+%RED%%NAME%%MAP-62% // Larzuk's Box
+
+// ------------------------------------------------------------------------------
+// [MAPI] Map Items
+// ------------------------------------------------------------------------------
+ItemDisplay[rera]: %NAME%{%TAN%Cube w/ Perfect Gem, Thul Rune or Greater, & Rare Map}%DOT-80% // Reroll Rare Map (Horadrim Orb)
+ItemDisplay[imra]: %NAME%{%TAN%Cube w/ Jewel, Thul Rune or Greater, & White Map}%DOT-80% // Imbue Rare Map (Zakarum Orb)
+ItemDisplay[upma]: %NAME%{%TAN%Cube w/ Perfect Skull, Thul Rune or Greater, & Magic Map}%DOT-80% // Upgrade Magic Map to Rare Map (Angelic Orb)
+ItemDisplay[imma]: %NAME%{%TAN%Cube w/ Jewel, Any Rune, & White Map}%DOT-80% // Imbue Magic Map (Arcane Orb)
+//ItemDisplay[???]: %NAME%{%TAN%Cube w/ Jewel & White Map}%DOT-80% // Imbue Random Rarity (Demonic Cube)
+ItemDisplay[scou]: %NAME%{%TAN%Cube w/ Hel Rune & Magic or Rare Map}%DOT-80% // Purge Map (Removes Mods and Reverts back to a White Map) (Orb of Destruction)
+
+// ------------------------------------------------------------------------------
+// [MAPI] Maps
+// ------------------------------------------------------------------------------
+ItemDisplay[t11]: %NAME% [T1]%MAP-87% // Map
+ItemDisplay[t12]: %NAME% [T2]%MAP-87% // Map
+ItemDisplay[t13]: %NAME% [T3]%MAP-87% // Map
+ItemDisplay[t14]: %NAME% [T4]%MAP-87% // Map
+ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Map
+ItemDisplay[t16]: %NAME% [T6]%MAP-87% // Ruins of Viz-jun
+ItemDisplay[t17]: %NAME% [T7]%MAP-87% // River of Blood
+ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
+
+
+//------------------------------------------
+// Class items
+//------------------------------------------
+
+//Paladin shields
+ItemDisplay[DIN NMAG RES>29 RES<36]: %NAME% @res(30-35) %CONTINUE%
+ItemDisplay[DIN NMAG RES>35 RES<41]: %NAME% @res(36-40) %CONTINUE%
+ItemDisplay[DIN NMAG RES>40 RES<45]: %NAME% @res(41-44) %CONTINUE%
+ItemDisplay[DIN NMAG RES=45]: %NAME% @res(45) %CONTINUE%
+
+//Druid pelts
+// ItemDisplay[DRU (SK225>1 OR SK229>1 OR SK234>1 OR SK244>1 OR SK249>1)]: %NAME% %RED%Fire Skills%CONTINUE%
+// ItemDisplay[DRU(SK230>1 OR SK240>1 OR SK245>1 OR SK250>1)]: %NAME% %BLUE%Cold Skills %CONTINUE%
+// ItemDisplay[DRU (SK221>1 OR SK222>1 OR SK226>1 OR SK227>1 OR SK231>1 OR SK236>1 OR SK237>1 OR SK241>1 OR SK246>1 OR SK247>1]: %NAME% %YELLOW%Summons%CONTINUE%
+
+
+
+//------------------------------------------------------------------
+// Hide junk items.
+// whites/gray and magic that are useless are hidden, doesn't hide useful items unless you consider white/gray/magic class items useful (it doesnt hide all class items)
+//------------------------------------------------------------------
+
+
+//Unwanted axes
+ItemDisplay[!RW NORM NMAG (hax OR axe OR 2ax OR mpi OR wax OR lax OR bax OR btx OR gax OR gix)]:
+ItemDisplay[!RW EXC NMAG (9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9la OR 9ba OR 9bt OR 9ga OR 9gi)]:
+ItemDisplay[!RW ELT NMAG (7ha OR 7ax OR 7mp OR 7la OR 7ba OR 7bt)]:
+ItemDisplay[!ID NORM MAG (hax OR axe OR 2ax OR mpi OR wax OR lax OR bax OR btx OR gax OR gix)]:
+ItemDisplay[!ID EXC MAG (9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9la OR 9ba OR 9bt OR 9ga OR 9gi)]:
+ItemDisplay[!ID ELT MAG (7ha OR 7ax OR 72a OR 7mp OR 7la OR 7ba OR 7bt OR 7ga OR 7gi)]:
+
+//Maces
+ItemDisplay[!RW NORM NMAG (clb OR spc OR mac OR mst OR whm OR mau OR gma)]:
+ItemDisplay[!RW EXC NMAG (9cl OR 9sp OR 9ma OR 9mt OR 9wh OR 9m9 OR 9gm)]:
+ItemDisplay[!RW ELT NMAG (7cl OR 7sp OR 7ma OR 7mt OR 7wh OR 7m7)]:
+ItemDisplay[!ID NORM MAG (clb OR spc OR mac OR mst OR whm OR mau OR gma OR fla)]:
+ItemDisplay[!ID EXC MAG (9cl OR 9sp OR 9ma OR 9mt OR 9wh OR 9m9 OR 9gm OR 9fl)]:
+ItemDisplay[!ID ELT MAG (7cl OR 7sp OR 7ma OR 7mt OR 7wh OR 7m7 OR 7fl OR 7gm)]:
+
+//Swords
+ItemDisplay[!RW NORM NMAG (ssd OR scm OR sbr OR flc OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd)]:
+ItemDisplay[!RW EXC NMAG (9ss OR 9sm OR 9sb OR 9fc OR 9cr OR 9bs OR 9ls OR 9wd OR 92h OR 9cm OR 9fb OR 9gs OR 9gd OR 9b9)]:
+ItemDisplay[!RW ELT NMAG (7ss OR 7sm OR 7sb OR 7fc OR 7bs OR 7ls OR 7wd OR 72h)]:
+ItemDisplay[!ID NORM MAG (ssd OR scm OR sbr OR flc OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR crs OR bsd)]:
+ItemDisplay[!ID EXC MAG (9ss OR 9sm OR 9sb OR 9fc OR 9cr OR 9bs OR 9ls OR 9wd OR 92h OR 9cm OR 9fb OR 9gs OR 9b9 OR 9gd)]:
+ItemDisplay[!ID ELT MAG (7ss OR 7sm OR 7sb OR 7fc OR 7cr OR 7bs OR 7ls OR 7wd OR 72h OR 7cm OR 7fb OR 7gs OR 7gd OR 7b7)]:
+
+//Daggers
+ItemDisplay[!RW NORM NMAG (dgr OR dir OR kri OR bld)]:
+ItemDisplay[!RW EXC NMAG (9dg OR 9di OR 9kr OR 9bl)]:
+ItemDisplay[!RW ELT NMAG (7dg OR 7di OR 7kr OR 7bl)]:
+ItemDisplay[!ID NORM MAG (dgr OR dir OR kri OR bld)]:
+ItemDisplay[!ID EXC MAG (9dg OR 9di OR 9kr OR 9bl)]:
+ItemDisplay[!ID ELT MAG (7dg OR 7di OR 7kr OR 7bl)]:
+
+//Throwing
+ItemDisplay[!RW NORM NMAG (tkf OR tax OR bkf OR bal)]:
+ItemDisplay[!RW EXC NMAG (9tk OR 9ta OR 9bk OR 9b8)]:
+ItemDisplay[!RW ELT NMAG (7tk OR 7ta OR 7bk OR 7b8)]:
+ItemDisplay[!ID NORM MAG (tkf OR tax OR bkf OR bal)]:
+ItemDisplay[!ID EXC MAG (9tk OR 9ta OR 9bk OR 9b8)]:
+ItemDisplay[!ID ELT MAG (7tk OR 7ta OR 7bk OR 7b8)]:
+
+//Javelins
+ItemDisplay[!RW NORM NMAG (jav OR pil OR ssp OR glv OR tsp)]:
+ItemDisplay[!RW EXC NMAG (9ja OR 9pi OR 9s9 OR 9gl OR 9ts)]:
+ItemDisplay[!RW ELT NMAG (7ja OR 7pi OR 7s7 OR 7gl OR 7ts)]:
+ItemDisplay[!ID NORM MAG (jav OR pil OR ssp OR glv OR tsp)]:
+ItemDisplay[!ID EXC MAG (9ja OR 9pi OR 9s9 OR 9gl OR 9ts)]:
+ItemDisplay[!ID ELT MAG (7ja OR 7pi OR 7s7 OR 7gl OR 7ts)]:
+
+//Spears
+ItemDisplay[!RW NORM NMAG (spr OR tri OR brn OR spt OR pik)]:
+ItemDisplay[!RW EXC NMAG (9sr OR 9tr OR 9br OR 9st OR 9p9)]:
+ItemDisplay[!RW ELT NMAG (7sr OR 7tr OR 7br OR 7st OR (!ETH 7p7))]:
+ItemDisplay[!ID NORM MAG (spr OR tri OR brn OR spt OR pik)]:
+ItemDisplay[!ID EXC MAG (9sr OR 9tr OR 9br OR 9st OR 9p9)]:
+ItemDisplay[!ID ELT MAG (7sr OR 7tr OR 7br OR 7st OR 7p7)]:
+
+//Polearms
+ItemDisplay[!RW NORM NMAG (SOCK=0 OR SOCK=6 OR SOCK=5) (bar OR vou OR scy OR pax OR hal OR wsc)]:
+ItemDisplay[!RW EXC NMAG (SOCK=0 OR SOCK=6 OR SOCK=5) (9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc)]:
+ItemDisplay[!RW !ETH ELT NMAG (SOCK=0 OR SOCK=5) (7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
+ItemDisplay[!ID NORM MAG (bar OR vou OR scy OR pax OR hal OR wsc)]:
+ItemDisplay[!ID EXC MAG (9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc)]:
+ItemDisplay[!ID ELT MAG (7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
+
+//Bows
+ItemDisplay[!RW NORM NMAG (lbw OR sbb OR lbb OR swb OR lwb)]:
+ItemDisplay[!RW EXC NMAG (8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8sw OR 8lw)]:
+ItemDisplay[!RW ELT NMAG (6sb OR 6lb OR 6s7 OR 6l7 OR 6sw)]:
+ItemDisplay[!ID NORM MAG (sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR swb OR lwb)]:
+ItemDisplay[!ID EXC MAG (8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8sw OR 8lw)]:
+ItemDisplay[!ID ELT MAG (6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6sw OR 6lw)]:
+
+//Crossbows
+ItemDisplay[!RW NORM NMAG (lxb OR mxb OR hxb OR rxb)]:
+ItemDisplay[!RW EXC NMAG (8lx OR 8mx OR 8hx OR 8rx)]:
+ItemDisplay[!RW ELT NMAG (6lx OR 6mx OR 6hx OR 6rx)]:
+ItemDisplay[!ID NORM MAG (lxb OR mxb OR hxb OR rxb)]:
+ItemDisplay[!ID EXC MAG (8lx OR 8mx OR 8hx OR 8rx)]:
+ItemDisplay[!ID ELT MAG (6lx OR 6mx OR 6hx OR 6rx)]:
+
+//Hats
+ItemDisplay[!RW NORM NMAG CLVL>41 (cap OR skp OR hlm OR fhl OR ghm OR crn OR msk OR bhm)]:
+ItemDisplay[!RW EXC NMAG (xap OR xkp OR xlm OR xhl OR xhm OR xrn OR xsk OR xh9)]:
+ItemDisplay[!RW ELT NMAG (uap OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9)]:
+ItemDisplay[!ID NORM MAG (cap OR skp OR hlm OR fhl OR ghm OR crn OR msk OR bhm)]:
+ItemDisplay[!ID EXC MAG (xap OR xkp OR xlm OR xhl OR xhm OR xrn OR xsk OR xh9)]:
+ItemDisplay[!ID ELT MAG (uap OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9)]:
+
+//Body armor
+ItemDisplay[!RW NORM NMAG (rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp)]:
+ItemDisplay[!RW EXC NMAG (xui OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar)]:
+ItemDisplay[!RW ELT NMAG !SUP !ETH (ung OR ucl OR uhn OR upl OR uld OR uth OR uul OR (!SUP uar) OR ult)]:
+ItemDisplay[!ID NORM MAG (qui OR lea OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp)]:
+ItemDisplay[!ID EXC MAG (xui OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar OR xtp)]:
+ItemDisplay[!ID ELT MAG (uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul OR uar OR utp)]:
+
+//Shields
+ItemDisplay[!RW NORM NMAG (buc OR sml OR lrg OR kit OR tow OR gts OR bsh OR spk)]:
+ItemDisplay[!RW EXC NMAG (xuc OR xml OR xrg OR xit OR xow OR xts OR xsh OR xpk)]:
+ItemDisplay[!RW ELT NMAG (uuc OR uml OR urg OR uow OR uts OR ush OR upk OR uit)]:
+ItemDisplay[!ID NORM MAG (buc OR sml OR lrg OR kit OR tow OR gts OR bsh OR spk)]:
+ItemDisplay[!ID EXC MAG (xuc OR xml OR xrg OR xit OR xow OR xts OR xsh OR xpk)]:
+ItemDisplay[!ID ELT MAG (uuc OR uml OR urg OR uow OR uts OR ush OR upk)]:
+
+//Gloves
+ItemDisplay[!RW NORM NMAG (lgl OR vgl OR mgl OR tgl OR hgl)]:
+ItemDisplay[!RW EXC NMAG (xlg OR xvg OR xmg OR xtg OR xhg)]:
+ItemDisplay[!RW ELT NMAG (ulg OR uvg OR umg OR utg OR uhg)]:
+//Magic gloves for zon/sin skills
+//ItemDisplay[!ID NORM MAG (lgl OR vgl OR mgl OR tgl OR hgl)]:
+//ItemDisplay[!ID EXC MAG (xlg OR xvg OR xmg OR xtg OR xhg)]:
+//ItemDisplay[!ID ELT MAG (ulg OR uvg OR umg OR utg OR uhg)]:
+
+//Boots
+ItemDisplay[!RW NORM NMAG (lbt OR vbt OR mbt OR tbt OR hbt)]:
+ItemDisplay[!RW EXC NMAG (xlb OR xvb OR xmb OR xtb OR xhb)]:
+ItemDisplay[!RW ELT NMAG (ulb OR uvb OR umb OR utb OR uhb)]:
+ItemDisplay[!ID NORM MAG (lbt OR vbt OR mbt OR tbt OR hbt)]:
+ItemDisplay[!ID EXC MAG (xlb OR xvb OR xmb OR xtb OR xhb)]:
+ItemDisplay[!ID ELT MAG (ulb OR uvb OR umb OR utb OR uhb)]:
+
+//Belts
+ItemDisplay[!RW NORM NMAG (lbl OR vbl OR mbl OR tbl OR hbl)]:
+ItemDisplay[!RW EXC NMAG (zlb OR zvb OR zmb OR ztb OR zhb)]:
+ItemDisplay[!RW ELT NMAG (ulc OR uvc OR umc OR utc OR uhc)]:
+ItemDisplay[!ID NORM MAG (lbl OR vbl OR mbl OR tbl OR hbl)]:
+ItemDisplay[!ID EXC MAG (zlb OR zvb OR zmb OR ztb OR zhb)]:
+ItemDisplay[!ID ELT MAG (ulc OR uvc OR umc OR utc OR uhc)]:
+
+
+
+//Filtering useless socket amount weapons and making sure exceptions don't pop up unintended
+ItemDisplay[NMAG SOCK=1 !leg]:
+ItemDisplay[NMAG !ETH !RW (SOCK=6 OR SOCK=4) (7gd OR 72a OR 7cm OR 72h OR 7gs OR 7b7 OR 7fb OR 7cr OR 6ls OR 6cs OR 6bs OR 6ws)]:
+ItemDisplay[NMAG SOCK=2 !RW (!cap !skp !hlm !fhl !msk !bhm !wnd !ywn !bwn !gwn !9wn !9yw !9bw !9gw !7wn !7bw !7gw !leg)]:
+ItemDisplay[NMAG !ETH SOCK=0 CLVL>65 (7ga OR 7gm OR crs OR fla OR sbw OR bsd OR 9fl OR cbw OR 72h OR 7cm OR 7gs OR 7b7 OR uea OR 72a OR qui OR lea OR hla OR stu OR 6hb OR 7fl OR 6cb OR (7gd SUP) OR uui OR uea OR ula OR utu OR urs OR utp OR 7bw OR 7yw OR ci0 OR ci1 OR (7wn (ETH OR !ETH)))]:
+ItemDisplay[NMAG !RW SOCK=3 (!fla !72a !9fl !crs !7cr WP1 OR WP2 OR WP3 OR WP4 OR WP5 OR WP6 OR WP7 OR WP8 OR WP9 OR WP10 OR WP11 OR WP12 OR WP13) !RW]:
+
+//Pelts
+ItemDisplay[!RW NORM NMAG dr1 OR dr2 OR dr3 OR dr4 OR dr5]:
+ItemDisplay[!RW EXC NMAG (dr6 OR dr7 OR dr8 OR dr9 OR dra)]:
+ItemDisplay[!RW ELT NMAG (drb OR drc OR drd OR dre OR drf)]:
+ItemDisplay[!ID NORM MAG dr1 OR dr2 OR dr3 OR dr4 OR dr5]:
+ItemDisplay[!ID EXC MAG (dr6 OR dr7 OR dr8 OR dr9 OR dra)]:
+ItemDisplay[!ID ELT MAG (drb OR drc OR drd OR dre OR drf)]:
+
+//Barb hats
+ItemDisplay[!RW NORM NMAG (ba1 OR ba2 OR ba3 OR ba4 OR ba5)]:
+ItemDisplay[!RW EXC NMAG (ba6 OR ba7 OR ba8 OR ba9 OR baa)]:
+ItemDisplay[!RW ELT NMAG (bab OR bac OR bad OR bae OR baf)]:
+//ItemDisplay[!ID NORM MAG (ba1 OR ba2 OR ba3 OR ba4 OR ba5)]:
+//ItemDisplay[!ID EXC MAG (ba6 OR ba7 OR ba8 OR ba9 OR baa)]:
+//ItemDisplay[!ID ELT MAG (bab OR bac OR bad OR bae OR baf)]:
+
+//Pala shields
+ItemDisplay[!RW NORM NMAG RES<30 (pa1 OR pa2 OR pa3 OR pa4 OR pa5)]:
+ItemDisplay[!RW EXC NMAG RES<30 (pa6 OR pa7 OR pa8 OR pa9 OR paa)]:
+ItemDisplay[!RW ELT NMAG ((ETH SUP) OR !ETH) RES<30 (pab OR pac OR pad OR pae OR paf)]:
+ItemDisplay[!ID NORM MAG (pa1 OR pa2 OR pa3 OR pa4 OR pa5)]:
+ItemDisplay[!ID EXC MAG (pa6 OR pa7 OR pa8 OR pa9 OR paa)]:
+ItemDisplay[!ID ELT MAG (pab OR pac OR pad OR pae OR paf)]:
+
+//Necro heads
+ItemDisplay[!RW NORM NMAG (ne1 OR ne2 OR ne3 OR ne4 OR ne5)]:
+ItemDisplay[!RW EXC NMAG (ne6 OR ne7 OR ne8 OR ne9 OR nea)]:
+ItemDisplay[!RW ELT NMAG (neb OR nec OR ned OR nee OR nef)]:
+ItemDisplay[!ID NORM MAG (ne1 OR ne2 OR ne3 OR ne4 OR ne5)]:
+ItemDisplay[!ID EXC MAG (ne6 OR ne7 OR ne8 OR ne9 OR nea)]:
+ItemDisplay[!ID ELT MAG (neb OR nec OR ned OR nee OR nef)]:
+
+//Orbs
+ItemDisplay[!RW NORM NMAG (ob1 OR ob2 OR pb3 OR ob4 OR ob5)]:
+ItemDisplay[!RW EXC NMAG (ob6 OR ob7 OR ob8 OR ob9 OR oba)]:
+ItemDisplay[!RW ELT NMAG (obb OR obc OR obd OR obe OR obf)]:
+//ItemDisplay[!ID NORM MAG (ob1 OR ob2 OR pb3 OR ob4 OR ob5)]:
+//ItemDisplay[!ID EXC MAG (ob6 OR ob7 OR ob8 OR ob9 OR oba)]:
+//ItemDisplay[!ID ELT MAG (obb OR obc OR obd OR obe OR obf)]:
+
+//Zon weapons
+ItemDisplay[!RW NORM NMAG (am1 OR am2 OR am3 OR am4 OR am5)]:
+ItemDisplay[!RW EXC NMAG (am6 OR am7 OR am8 OR am9 OR ama)]:
+ItemDisplay[!RW ELT NMAG (amd OR ame OR amf OR ((amb OR amc) TABSK0<3))]:
+ItemDisplay[!ID NORM MAG (am1 OR am2 OR am3 OR am4)]:
+ItemDisplay[!ID EXC MAG (am6 OR am7 OR am8 OR am9)]:
+ItemDisplay[!ID ELT MAG (amb OR amc OR amd OR ame)]:
+
+//Staves
+ItemDisplay[!RW NORM NMAG ((SOCK=0 OR SOCK=6) sst OR lst OR cst OR bst OR wst)]:
+ItemDisplay[!RW EXC NMAG ((SOCK=0 OR SOCK=6) 8ss OR 8ls OR 8cs OR 8bs OR 8ws)]:
+ItemDisplay[!RW ELT NMAG ((SOCK=0 OR SOCK=6) 6ss OR 6ls OR 6cs OR 6bs OR 6ws)]:
+ItemDisplay[!ID NORM MAG (sst OR lst OR cst OR bst OR wst)]:
+ItemDisplay[!ID EXC MAG (8ss OR 8ls OR 8cs OR 8bs OR 8ws)]:
+ItemDisplay[!ID ELT MAG (6ss OR 6ls OR 6cs OR 6bs OR 6ws)]:
+
+//Wands
+ItemDisplay[!RW NORM NMAG (wnd OR ywn OR bwn OR gwn)]:
+ItemDisplay[!RW EXC NMAG (9wn OR 9yw OR 9bw OR 9gw)]:
+ItemDisplay[!RW ELT NMAG (7wn OR 7yw OR 7bw OR 7gw)]:
+ItemDisplay[!ID NORM MAG (wnd OR ywn OR bwn OR gwn)]:
+ItemDisplay[!ID EXC MAG (9wn OR 9yw OR 9bw OR 9gw)]:
+ItemDisplay[!ID ELT MAG (7wn OR 7yw OR 7bw OR 7gw)]:
+
+//Scepters
+ItemDisplay[!RW NORM NMAG (scp OR gsc OR (wsp SOCK=0))]:
+ItemDisplay[!RW EXC NMAG (9sc OR 9qs OR (9ws SOCK=0))]:
+ItemDisplay[!RW ELT NMAG (7sc OR 7qs OR (7ws SOCK=0))]:
+ItemDisplay[!ID NORM MAG (scp OR gsc OR wsp)]:
+ItemDisplay[!ID EXC MAG (9sc OR 9qs OR 9ws)]:
+ItemDisplay[!ID ELT MAG (7sc OR 7qs OR 7ws)]:
+
+//Claws
+ItemDisplay[!RW NORM NMAG (ktr OR wrb OR axf OR ces OR clw OR btl OR skr)]:
+ItemDisplay[!RW EXC NMAG (9ar OR 9wb OR 9xf OR 9cs OR 9lw OR 9tw OR 9qr)]:
+ItemDisplay[!RW ELT NMAG (7ar OR 7wb OR 7xf OR 7cs OR 7lw OR 7qr OR 7tw)]:
+ItemDisplay[!ID NORM MAG (ktr OR wrb OR axf OR ces OR clw OR btl OR skr)]:
+ItemDisplay[!ID EXC MAG (9ar OR 9wb OR 9xf OR 9cs OR 9qr)]:
+ItemDisplay[!ID ELT MAG (7ar OR 7wb OR 7xf OR 7cs OR 7qr)]:
+
