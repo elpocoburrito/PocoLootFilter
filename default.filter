@@ -1,3 +1,7 @@
+// ---------------------------
+// --       Misc Items      --
+// ---------------------------
+
 //Level based filters. Add double slash // in front of each line you want to disable. This means you'll always see these pots. Minor to Super, HP to Mana.
 //Hide health pots from minor to grand, depending on level
 ItemDisplay[hp1 CLVL>10]:
@@ -53,6 +57,10 @@ ItemDisplay[CLVL>59 CLVL<80 GOLD<1000]:
 ItemDisplay[CLVL>79 GOLD<2000]:
 
 
+// ---------------------------
+// --    Gems and Runes     --
+// ---------------------------
+
 //Gems - Hide low gems depending on your character lvl and make gems name shorter
 ItemDisplay[GEM=1 CLVL>14]:
 ItemDisplay[GEM=2 CLVL>23]:
@@ -77,22 +85,19 @@ ItemDisplay[GEMTYPE=7]: %NAME%%ORANGE%Skull //Skulls
 //Append quantity after stacks
 ItemDisplay[GEM>0 QTY>1]: %NAME% %WHITE%x%QTY%%CONTINUE% // Shows the quantity of gems in a stack
 
-// Bugged for now, doesnt work with non-stack flawless/perfect gems
-// ItemDisplay[GEM=1]: %WHITE%C- %NAME%%CONTINUE%
-// ItemDisplay[GEM=2]: %BLUE%F- %NAME%%CONTINUE%
-// ItemDisplay[GEM=3]: %YELLOW%N- %NAME%%CONTINUE%
-// ItemDisplay[GEM=4]: %ORANGE%F+ %NAME%%CONTINUE%
-// ItemDisplay[GEM=5]: %NAME%%PURPLE%P+ %CONTINUE%
-
 //Display prettier runes with rune number in name
 ItemDisplay[RUNE<14]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																									//el-shael
 ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%											//dol-fal
 ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¥%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
 ItemDisplay[RUNE>22]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%WHITE%[%DARK_GREEN%Ø%PURPLE%Ø%RED%¥ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RED%¥%PURPLE%Ø%DARK_GREEN%Ø%WHITE%]%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%		//mal-zod
+
+//Append quantity after stacks
 ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																												// Shows the quantity of runes in a stack
 
 
-
+// ---------------------------
+// --      Append info      --
+// ---------------------------
 
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-B%%CONTINUE%
@@ -103,6 +108,7 @@ ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
 ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
 ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
 
+//Append Enhanced defense/damage to all white/gray items
 ItemDisplay[NMAG ED>4 ED<10]: %NAME% %BLUE%ED%WHITE%(%RED%5-9%WHITE%)%CONTINUE%
 ItemDisplay[NMAG ED=10]: %NAME% %BLUE%ED%WHITE%-%RED%10%CONTINUE%
 ItemDisplay[NMAG ED=11]: %NAME% %BLUE%ED%WHITE%-%RED%11%CONTINUE%
@@ -112,28 +118,26 @@ ItemDisplay[NMAG ED=14]: %NAME% %BLUE%ED%WHITE%-%RED%14%CONTINUE%
 ItemDisplay[NMAG ED=15]: %NAME% %BLUE%ED%WHITE%-%RED%15%CONTINUE%
 
 //Append $ if the item has a value higher than 10k and player is below lvl 24, 20k and player below 45, 30k always
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %CONTINUE%
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %CONTINUE%
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL>44 PRICE>29999]: %DARK_GREEN%$ %CONTINUE%
-
-//Hide inferior items for level 6 and above
-ItemDisplay[CLVL>5 INF]:
+ItemDisplay[(MAG OR NMAG OR RARE) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %NAME%%CONTINUE%
+ItemDisplay[(MAG OR NMAG OR RARE) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %NAME%%CONTINUE%
+ItemDisplay[(MAG OR NMAG OR RARE) CLVL>44 PRICE>29999]: %DARK_GREEN%$ %NAME%%CONTINUE%
 
 
-// ----------------------------
-// [QUES] Quest Items
-// ----------------------------
-// -----------------------------
+// ------------------------------
+// [QUES]    Quest Items	   //
+// ------------------------------
+// ---------------------------
 // [QIA1] Act 1
-// -----------------------------
+// ---------------------------
 ItemDisplay[hdm]: %NAME%%MAP-00%{%TAN%Give to Charsi in Act 1} // Horadric Malus
 ItemDisplay[bks]: %NAME%%MAP-00%{%TAN%Talk to Akara in Act 1%NL%} // Scroll of Inifuss
 ItemDisplay[bkd]: %NAME%%MAP-00%{%TAN%Go to Act 1: Stony Field%NL%} // Scroll of Inifuss, deciphered
 ItemDisplay[leg]: %NAME%%MAP-00%{%TAN%This is the key to %PURPLE%Moo %GREEN%Moo %YELLOW%Land!%NL%%TAN%Full of mysteries...} // Wirt's Leg
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIA2] Act 2
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[ass]: %NAME%%MAP-00%{%TAN%Right click for +1 Skill Point%NL%} // Book of Skill
 ItemDisplay[tr1]: //%NAME%{%TAN%Not required%NL%} // Horadric Scroll
 ItemDisplay[box]: %NAME%%MAP-0C% // Horadric Cube
@@ -141,9 +145,10 @@ ItemDisplay[hst]: %NAME%%MAP-00%{%TAN%Use in Tomb Orifice in Act 2: Tal Rashas T
 ItemDisplay[msf]: %NAME%%MAP-00%{%TAN%Cube w/ Amulet of the Viper} // Staff of Kings
 ItemDisplay[vip]: %NAME%%MAP-00%{%TAN%Cube w/ Staff of Kings} // Amulet of the Viper
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIA3] Act 3
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[j34]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim%WHITE%: %TAN%World of fetch quests V%NL%} // A Jade Figurine
 ItemDisplay[g33]: %NAME%%MAP-00%{%TAN%Give to Ormus in Act 3 to get about 2000 gold%NL%} // Gidbinn
 ItemDisplay[qbr]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim 2%WHITE%!%NL%} // Khalim's Brain
@@ -156,58 +161,64 @@ ItemDisplay[mss]: %NAME%%MAP-00%{%TAN%Take to the Hellforge in Act 4: River of F
 ItemDisplay[xyz]: %NAME%%MAP-00%{%TAN%Right click for a permanent +20 to Life%NL%} // Potion of Life
 ItemDisplay[g34]: %NAME%%MAP-00%{%TAN%Welcome to %RED%Skyrim%WHITE%: %TAN%World of fetch quests V%NL%} // The Golden Bird
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIA4] Act 4
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[hfh]: %NAME%%MAP-00%{%TAN%Hit Hellforge in Act 4: River of Flame} // Hellforge Hammer
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIA5] Act 5
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[ice]: %NAME%%MAP-00%{%TAN%Typical Skyrim quest!} // Malah's Potion
 ItemDisplay[tr2]: %NAME%%MAP-00%{%TAN%Right click for a permanent All Resistances +10%NL%} // Scroll of Resistance
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIES] Essences
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[tes]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with ghostly boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Twisted Essence of Suffering
 ItemDisplay[ceh]: %ORANGE%%NAME%%MAP-00%{%TAN%This is ghostly boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Charged Essence of Hatred
 ItemDisplay[bet]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Burning Essence of Terror
 ItemDisplay[fed]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%angry boy's essence.%NL%} // Festering Essence of Destruction
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QITO] Tokens
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[toa]: %ORANGE%%NAME%%MAP-68%{%TAN%Right click to reset stats & skills%NL%} // Token of Absolution
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIKE] Pandemonium Keys
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[pk3]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
 ItemDisplay[pk2]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
 ItemDisplay[pk1]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [QIOR] Pandemonium Organs
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[bey]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
 ItemDisplay[dhn]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
 ItemDisplay[mbr]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
 
-// +----------------------------------------------------------------------------+
-// |                                                                            |
-// |     [PD2N] Map Items                                                       |
-// |                                                                            |
-// +----------------------------------------------------------------------------+
-// ------------------------------------------------------------------------------
+
+// +--------------------------
+// |     [PD2N] Map Items     
+// +--------------------------
+// ---------------------------
 // [CORR] Corruption Items
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[wss]: %PURPLE%+%RED%%NAME%%MAP-62% // Worldstone Shard
 ItemDisplay[lbox]: %PURPLE%+%RED%%NAME%%MAP-62% // Larzuk's Box
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [MAPI] Map Items
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[rera]: %NAME%{%TAN%Cube w/ Perfect Gem, Thul Rune or Greater, & Rare Map}%DOT-80% // Reroll Rare Map (Horadrim Orb)
 ItemDisplay[imra]: %NAME%{%TAN%Cube w/ Jewel, Thul Rune or Greater, & White Map}%DOT-80% // Imbue Rare Map (Zakarum Orb)
 ItemDisplay[upma]: %NAME%{%TAN%Cube w/ Perfect Skull, Thul Rune or Greater, & Magic Map}%DOT-80% // Upgrade Magic Map to Rare Map (Angelic Orb)
@@ -215,9 +226,10 @@ ItemDisplay[imma]: %NAME%{%TAN%Cube w/ Jewel, Any Rune, & White Map}%DOT-80% // 
 //ItemDisplay[???]: %NAME%{%TAN%Cube w/ Jewel & White Map}%DOT-80% // Imbue Random Rarity (Demonic Cube)
 ItemDisplay[scou]: %NAME%{%TAN%Cube w/ Hel Rune & Magic or Rare Map}%DOT-80% // Purge Map (Removes Mods and Reverts back to a White Map) (Orb of Destruction)
 
-// ------------------------------------------------------------------------------
+
+// ---------------------------
 // [MAPI] Maps
-// ------------------------------------------------------------------------------
+// ---------------------------
 ItemDisplay[t11]: %NAME% [T1]%MAP-87% // Map
 ItemDisplay[t12]: %NAME% [T2]%MAP-87% // Map
 ItemDisplay[t13]: %NAME% [T3]%MAP-87% // Map
@@ -228,9 +240,9 @@ ItemDisplay[t17]: %NAME% [T7]%MAP-87% // River of Blood
 ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
 
 
-//------------------------------------------
-// Class items
-//------------------------------------------
+// ---------------------------
+// --      Class items      --
+// ---------------------------
 
 //Paladin shields
 ItemDisplay[DIN NMAG RES>29 RES<36]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%GRAY%30-35%WHITE%)
@@ -244,10 +256,11 @@ ItemDisplay[DIN NMAG RES=45]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%GRAY%45%WHITE
 // ItemDisplay[DRU (SK221>1 OR SK222>1 OR SK226>1 OR SK227>1 OR SK231>1 OR SK236>1 OR SK237>1 OR SK241>1 OR SK246>1 OR SK247>1]: %NAME% %YELLOW%Summons%CONTINUE%
 
 
-
 //------------------------------------------------------------------
-// Hide junk items.
-// whites/gray and magic that are useless are hidden, doesn't hide useful items unless you consider white/gray/magic class items useful (it doesnt hide all class items)
+// --                    Hide junk items.                         --
+// -- whites/gray and magic that are useless are hidden, doesn't  --
+// -- hide useful items unless you consider white/gray/magic      --
+// -- class items useful (it doesnt hide all class items)         --
 //------------------------------------------------------------------
 
 //ItemDisplay[(AXE OR MACE OR SWORD OR DAGGER OR THROWING OR JAV OR SPEAR OR POLEARM OR BOW OR XBOX OR STAFF OR WAND OR SCEPTER)]:
@@ -256,14 +269,16 @@ ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) N
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) EXC NMAG CLVL>49 !((9s8 OR 9vo) SOCK=0)(!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) ELT NMAG (!(7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 72h) SOCK=0) (!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
 
+//Hides all non-Class MAG items depending on tier and player level.
 ItemDisplay[(WEAPON OR ARMOR) MAG NORM CLVL>34]:
 ItemDisplay[(WEAPON OR ARMOR) MAG EXC CLVL>49]:
 ItemDisplay[(WEAPON OR ARMOR) MAG ELT CLVL>59]:
 
+//Hides all Class MAG items depending on tier and player level.
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG NORM CLVL>44]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG EXC CLVL>54]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG ELT CLVL>64]:
 
+ItemDisplay[CLVL>5 INF]:
 
-//ItemDisplay[]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%WHITE%[%DARK_GREEN%Ø%PURPLE%Ø%RED%¥ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RED%¥%PURPLE%Ø%DARK_GREEN%Ø%WHITE%]%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%
 //ItemDisplay[]: §   ©   µ   Ø   ×   ¶   ¥   ¤   ~
