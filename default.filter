@@ -91,22 +91,33 @@ ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNE
 ItemDisplay[RUNE>22]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%WHITE%[%DARK_GREEN%Ø%PURPLE%Ø%RED%¥ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RED%¥%PURPLE%Ø%DARK_GREEN%Ø%WHITE%]%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%		//mal-zod
 ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																												// Shows the quantity of runes in a stack
 
-//Hide inferior items for level 6 and above
-ItemDisplay[CLVL>5 INF]:
 
-//Append sockets and [eth] to socketed/eth items
-ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
-ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
+
 
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-B%%CONTINUE%
 ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-E%%CONTINUE%
 ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
 
+//Append sockets and [eth] to socketed/eth items
+ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
+ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
 
+ItemDisplay[NMAG ED>4 ED<10]: %NAME% %BLUE%ED%WHITE%(%RED%5-9%WHITE%)%CONTINUE%
+ItemDisplay[NMAG ED=10]: %NAME% %BLUE%ED%WHITE%-%RED%10%CONTINUE%
+ItemDisplay[NMAG ED=11]: %NAME% %BLUE%ED%WHITE%-%RED%11%CONTINUE%
+ItemDisplay[NMAG ED=12]: %NAME% %BLUE%ED%WHITE%-%RED%12%CONTINUE%
+ItemDisplay[NMAG ED=13]: %NAME% %BLUE%ED%WHITE%-%RED%13%CONTINUE%
+ItemDisplay[NMAG ED=14]: %NAME% %BLUE%ED%WHITE%-%RED%14%CONTINUE%
+ItemDisplay[NMAG ED=15]: %NAME% %BLUE%ED%WHITE%-%RED%15%CONTINUE%
+
+//Append $ if the item has a value higher than 10k and player is below lvl 24, 20k and player below 45, 30k always
 ItemDisplay[(MAG OR NMAG OR RARE) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %CONTINUE%
+ItemDisplay[(MAG OR NMAG OR RARE) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %CONTINUE%
+ItemDisplay[(MAG OR NMAG OR RARE) CLVL>44 PRICE>29999]: %DARK_GREEN%$ %CONTINUE%
 
-
+//Hide inferior items for level 6 and above
+ItemDisplay[CLVL>5 INF]:
 
 
 // ----------------------------
@@ -241,7 +252,7 @@ ItemDisplay[DIN NMAG RES=45]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%GRAY%45%WHITE
 
 //ItemDisplay[(AXE OR MACE OR SWORD OR DAGGER OR THROWING OR JAV OR SPEAR OR POLEARM OR BOW OR XBOX OR STAFF OR WAND OR SCEPTER)]:
 //Hides all NMAG with no 2,3,4,5,6 sockets varying per level and difficulty. (exception for crystal swords and broad swords that can be larzuk for 4os
-ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) NORM NMAG CLVL>34 ((!SOCK=2 OR !SOCK=3 OR !SOCK=4) !(crs (SOCK=0 ILVL>25 ILVL<41)) !(bsd (SOCK=0 AND ILVL>25)))]:
+//ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) NORM NMAG CLVL>34 ((!SOCK=2 OR !SOCK=3 OR !SOCK=4) !(crs (SOCK=0 ILVL>25 ILVL<41)) !(bsd (SOCK=0 AND ILVL>25)))]:
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) EXC NMAG CLVL>49 !((9s8 OR 9vo) SOCK=0)(!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) ELT NMAG (!(7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 72h) SOCK=0) (!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
 
