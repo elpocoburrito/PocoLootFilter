@@ -83,11 +83,11 @@ ItemDisplay[GEM>0 QTY>1]: %NAME% x%QTY%%CONTINUE% // Shows the quantity of gems 
 
 
 //Display prettier runes with rune number in name
-ItemDisplay[RUNE<14]: %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																									//el-shael
-ItemDisplay[RUNE>13 RUNE<20]: %RED%Â¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%Â¤%BORDER-00%%MAP-60%%NOTIFY-8%												//dol-fal
-ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%Â¤Â¤%RED%Â¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%Â¤%PURPLE%Â¤Â¤%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
-ItemDisplay[RUNE>22]: %PURPLE%Â¤Â¤%RED%Â¤Â¤ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RUNENAME% %RED%Â¤Â¤%PURPLE%Â¤Â¤%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%		//mal-zod
-ItemDisplay[RUNE>0 QTY>0]: %NAME% x%QTY%%CONTINUE% 																													// Shows the quantity of runes in a stack
+ItemDisplay[RUNE<14]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																									//el-shael
+ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%											//dol-fal
+ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¥%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
+ItemDisplay[RUNE>22]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%WHITE%[%DARK_GREEN%Ø%PURPLE%Ø%RED%¥ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RED%¥%PURPLE%Ø%DARK_GREEN%Ø%WHITE%]%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%		//mal-zod
+ItemDisplay[RUNE>0 QTY>0]: %NAME% x%QTY%%CONTINUE% 																												// Shows the quantity of runes in a stack
 
 //Hide inferior items for level 6 and above
 ItemDisplay[CLVL>5 INF]:
@@ -100,8 +100,6 @@ ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-B%%CONTINUE%
 ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-E%%CONTINUE%
 ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
-
-
 
 
 // ----------------------------
@@ -236,7 +234,7 @@ ItemDisplay[DIN NMAG RES=45]: %NAME% @res(45) %CONTINUE%
 
 
 //Unwanted axes
-ItemDisplay[!RW NORM NMAG (hax OR axe OR 2ax OR mpi OR wax OR lax OR bax OR btx OR gax OR gix)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (hax OR axe OR 2ax OR mpi OR wax OR lax OR bax OR btx OR gax OR gix)]:
 ItemDisplay[!RW EXC NMAG (9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9la OR 9ba OR 9bt OR 9ga OR 9gi)]:
 ItemDisplay[!RW ELT NMAG (7ha OR 7ax OR 7mp OR 7la OR 7ba OR 7bt)]:
 ItemDisplay[!ID NORM MAG (hax OR axe OR 2ax OR mpi OR wax OR lax OR bax OR btx OR gax OR gix)]:
@@ -244,7 +242,7 @@ ItemDisplay[!ID EXC MAG (9ha OR 9ax OR 92a OR 9mp OR 9wa OR 9la OR 9ba OR 9bt OR
 ItemDisplay[!ID ELT MAG (7ha OR 7ax OR 72a OR 7mp OR 7la OR 7ba OR 7bt OR 7ga OR 7gi)]:
 
 //Maces
-ItemDisplay[!RW NORM NMAG (clb OR spc OR mac OR mst OR whm OR mau OR gma)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (clb OR spc OR mac OR mst OR whm OR mau OR gma)]:
 ItemDisplay[!RW EXC NMAG (9cl OR 9sp OR 9ma OR 9mt OR 9wh OR 9m9 OR 9gm)]:
 ItemDisplay[!RW ELT NMAG (7cl OR 7sp OR 7ma OR 7mt OR 7wh OR 7m7)]:
 ItemDisplay[!ID NORM MAG (clb OR spc OR mac OR mst OR whm OR mau OR gma OR fla)]:
@@ -252,7 +250,7 @@ ItemDisplay[!ID EXC MAG (9cl OR 9sp OR 9ma OR 9mt OR 9wh OR 9m9 OR 9gm OR 9fl)]:
 ItemDisplay[!ID ELT MAG (7cl OR 7sp OR 7ma OR 7mt OR 7wh OR 7m7 OR 7fl OR 7gm)]:
 
 //Swords
-ItemDisplay[!RW NORM NMAG (ssd OR scm OR sbr OR flc OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (ssd OR scm OR sbr OR flc OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd)]:
 ItemDisplay[!RW EXC NMAG (9ss OR 9sm OR 9sb OR 9fc OR 9cr OR 9bs OR 9ls OR 9wd OR 92h OR 9cm OR 9fb OR 9gs OR 9gd OR 9b9)]:
 ItemDisplay[!RW ELT NMAG (7ss OR 7sm OR 7sb OR 7fc OR 7bs OR 7ls OR 7wd OR 72h)]:
 ItemDisplay[!ID NORM MAG (ssd OR scm OR sbr OR flc OR lsd OR wsd OR 2hs OR clm OR gis OR bsw OR flb OR gsd OR crs OR bsd)]:
@@ -260,7 +258,7 @@ ItemDisplay[!ID EXC MAG (9ss OR 9sm OR 9sb OR 9fc OR 9cr OR 9bs OR 9ls OR 9wd OR
 ItemDisplay[!ID ELT MAG (7ss OR 7sm OR 7sb OR 7fc OR 7cr OR 7bs OR 7ls OR 7wd OR 72h OR 7cm OR 7fb OR 7gs OR 7gd OR 7b7)]:
 
 //Daggers
-ItemDisplay[!RW NORM NMAG (dgr OR dir OR kri OR bld)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (dgr OR dir OR kri OR bld)]:
 ItemDisplay[!RW EXC NMAG (9dg OR 9di OR 9kr OR 9bl)]:
 ItemDisplay[!RW ELT NMAG (7dg OR 7di OR 7kr OR 7bl)]:
 ItemDisplay[!ID NORM MAG (dgr OR dir OR kri OR bld)]:
@@ -268,7 +266,7 @@ ItemDisplay[!ID EXC MAG (9dg OR 9di OR 9kr OR 9bl)]:
 ItemDisplay[!ID ELT MAG (7dg OR 7di OR 7kr OR 7bl)]:
 
 //Throwing
-ItemDisplay[!RW NORM NMAG (tkf OR tax OR bkf OR bal)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (tkf OR tax OR bkf OR bal)]:
 ItemDisplay[!RW EXC NMAG (9tk OR 9ta OR 9bk OR 9b8)]:
 ItemDisplay[!RW ELT NMAG (7tk OR 7ta OR 7bk OR 7b8)]:
 ItemDisplay[!ID NORM MAG (tkf OR tax OR bkf OR bal)]:
@@ -276,7 +274,7 @@ ItemDisplay[!ID EXC MAG (9tk OR 9ta OR 9bk OR 9b8)]:
 ItemDisplay[!ID ELT MAG (7tk OR 7ta OR 7bk OR 7b8)]:
 
 //Javelins
-ItemDisplay[!RW NORM NMAG (jav OR pil OR ssp OR glv OR tsp)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (jav OR pil OR ssp OR glv OR tsp)]:
 ItemDisplay[!RW EXC NMAG (9ja OR 9pi OR 9s9 OR 9gl OR 9ts)]:
 ItemDisplay[!RW ELT NMAG (7ja OR 7pi OR 7s7 OR 7gl OR 7ts)]:
 ItemDisplay[!ID NORM MAG (jav OR pil OR ssp OR glv OR tsp)]:
@@ -284,7 +282,7 @@ ItemDisplay[!ID EXC MAG (9ja OR 9pi OR 9s9 OR 9gl OR 9ts)]:
 ItemDisplay[!ID ELT MAG (7ja OR 7pi OR 7s7 OR 7gl OR 7ts)]:
 
 //Spears
-ItemDisplay[!RW NORM NMAG (spr OR tri OR brn OR spt OR pik)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (spr OR tri OR brn OR spt OR pik)]:
 ItemDisplay[!RW EXC NMAG (9sr OR 9tr OR 9br OR 9st OR 9p9)]:
 ItemDisplay[!RW ELT NMAG (7sr OR 7tr OR 7br OR 7st OR (!ETH 7p7))]:
 ItemDisplay[!ID NORM MAG (spr OR tri OR brn OR spt OR pik)]:
@@ -292,7 +290,7 @@ ItemDisplay[!ID EXC MAG (9sr OR 9tr OR 9br OR 9st OR 9p9)]:
 ItemDisplay[!ID ELT MAG (7sr OR 7tr OR 7br OR 7st OR 7p7)]:
 
 //Polearms
-ItemDisplay[!RW NORM NMAG (SOCK=0 OR SOCK=6 OR SOCK=5) (bar OR vou OR scy OR pax OR hal OR wsc)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (SOCK=0 OR SOCK=6 OR SOCK=5) (bar OR vou OR scy OR pax OR hal OR wsc)]:
 ItemDisplay[!RW EXC NMAG (SOCK=0 OR SOCK=6 OR SOCK=5) (9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc)]:
 ItemDisplay[!RW !ETH ELT NMAG (SOCK=0 OR SOCK=5) (7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
 ItemDisplay[!ID NORM MAG (bar OR vou OR scy OR pax OR hal OR wsc)]:
@@ -300,7 +298,7 @@ ItemDisplay[!ID EXC MAG (9b7 OR 9vo OR 9s8 OR 9pa OR 9h9 OR 9wc)]:
 ItemDisplay[!ID ELT MAG (7o7 OR 7vo OR 7s8 OR 7pa OR 7h7 OR 7wc)]:
 
 //Bows
-ItemDisplay[!RW NORM NMAG (lbw OR sbb OR lbb OR swb OR lwb)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (lbw OR sbb OR lbb OR swb OR lwb)]:
 ItemDisplay[!RW EXC NMAG (8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8sw OR 8lw)]:
 ItemDisplay[!RW ELT NMAG (6sb OR 6lb OR 6s7 OR 6l7 OR 6sw)]:
 ItemDisplay[!ID NORM MAG (sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR swb OR lwb)]:
@@ -308,7 +306,7 @@ ItemDisplay[!ID EXC MAG (8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8sw OR 8lw)]:
 ItemDisplay[!ID ELT MAG (6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6sw OR 6lw)]:
 
 //Crossbows
-ItemDisplay[!RW NORM NMAG (lxb OR mxb OR hxb OR rxb)]:
+ItemDisplay[!RW NORM NMAG CLVL>45 (lxb OR mxb OR hxb OR rxb)]:
 ItemDisplay[!RW EXC NMAG (8lx OR 8mx OR 8hx OR 8rx)]:
 ItemDisplay[!RW ELT NMAG (6lx OR 6mx OR 6hx OR 6rx)]:
 ItemDisplay[!ID NORM MAG (lxb OR mxb OR hxb OR rxb)]:
@@ -316,25 +314,25 @@ ItemDisplay[!ID EXC MAG (8lx OR 8mx OR 8hx OR 8rx)]:
 ItemDisplay[!ID ELT MAG (6lx OR 6mx OR 6hx OR 6rx)]:
 
 //Hats
-ItemDisplay[!RW NORM NMAG CLVL>41 (cap OR skp OR hlm OR fhl OR ghm OR crn OR msk OR bhm)]:
-ItemDisplay[!RW EXC NMAG (xap OR xkp OR xlm OR xhl OR xhm OR xrn OR xsk OR xh9)]:
-ItemDisplay[!RW ELT NMAG (uap OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9)]:
+ItemDisplay[!RW NORM NMAG ((CLVL>39 AND !SOCK=2) OR CLVL>49) (cap OR skp OR hlm OR fhl OR ghm OR crn OR msk OR bhm)]: //Hides normal diff. hats if they are not 2-3 sockets and you are level 40+ OR if you are level 50+ regardless of sockets
+ItemDisplay[!RW EXC NMAG ((CLVL>49 AND (!SOCK=2 OR !SOCK=3)) OR CLVL>59) (xap OR xkp OR xlm OR xhl OR xhm OR xrn OR xsk OR xh9)]:
+ItemDisplay[!RW ELT NMAG ((CLVL>59 AND (!SOCK=2 OR !SOCK=3)) OR CLVL>79) (uap OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9)]:
 ItemDisplay[!ID NORM MAG (cap OR skp OR hlm OR fhl OR ghm OR crn OR msk OR bhm)]:
 ItemDisplay[!ID EXC MAG (xap OR xkp OR xlm OR xhl OR xhm OR xrn OR xsk OR xh9)]:
 ItemDisplay[!ID ELT MAG (uap OR ukp OR ulm OR uhl OR uhm OR urn OR usk OR uh9)]:
 
 //Body armor
-ItemDisplay[!RW NORM NMAG (rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp)]:
-ItemDisplay[!RW EXC NMAG (xui OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar)]:
-ItemDisplay[!RW ELT NMAG !SUP !ETH (ung OR ucl OR uhn OR upl OR uld OR uth OR uul OR (!SUP uar) OR ult)]:
+ItemDisplay[!RW NORM NMAG ((CLVL>39 AND (!SOCK=2 OR !SOCK=3 OR !SOCK=4)) OR CLVL>49) (rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp)]: //Hides normal diff. armors if they are not 2-3 sockets and you are level 40+ OR if you are level 50+ regardless of sockets
+ItemDisplay[!RW EXC NMAG ((CLVL>49 AND (!SOCK=2 OR !SOCK=3 OR !SOCK=4)) OR CLVL>59) (xui OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar)]:
+ItemDisplay[!RW ELT NMAG !SUP !ETH ((CLVL>59 AND (!SOCK=2 OR !SOCK=3 OR !SOCK=4)) OR CLVL>69) (ung OR ucl OR uhn OR upl OR uld OR uth OR uul OR (!SUP uar) OR ult)]:
 ItemDisplay[!ID NORM MAG (qui OR lea OR hla OR stu OR rng OR scl OR chn OR brs OR spl OR plt OR fld OR gth OR ful OR aar OR ltp)]:
 ItemDisplay[!ID EXC MAG (xui OR xea OR xla OR xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul OR xar OR xtp)]:
 ItemDisplay[!ID ELT MAG (uui OR uea OR ula OR utu OR ung OR ucl OR uhn OR urs OR upl OR ult OR uld OR uth OR uul OR uar OR utp)]:
 
 //Shields
-ItemDisplay[!RW NORM NMAG (buc OR sml OR lrg OR kit OR tow OR gts OR bsh OR spk)]:
-ItemDisplay[!RW EXC NMAG (xuc OR xml OR xrg OR xit OR xow OR xts OR xsh OR xpk)]:
-ItemDisplay[!RW ELT NMAG (uuc OR uml OR urg OR uow OR uts OR ush OR upk OR uit)]:
+ItemDisplay[!RW NORM NMAG ((CLVL>39 AND (!SOCK=2 OR !SOCK=3)) OR CLVL>49) (buc OR sml OR lrg OR kit OR tow OR gts OR bsh OR spk)]: //Hides normal diff. shields if they are not 2-3 sockets and you are level 40+ OR if you are level 50+ regardless of sockets
+ItemDisplay[!RW EXC NMAG (CLVL>49 AND (!SOCK=2 OR !SOCK=3 OR !SOCK=4)) (xuc OR xml OR xrg OR xit OR xow OR xts OR xsh OR xpk)]:
+ItemDisplay[!RW ELT NMAG (CLVL>59 AND (!SOCK=2 OR !SOCK=3 OR !SOCK=4)) (uuc OR uml OR urg OR uow OR uts OR ush OR upk)]:
 ItemDisplay[!ID NORM MAG (buc OR sml OR lrg OR kit OR tow OR gts OR bsh OR spk)]:
 ItemDisplay[!ID EXC MAG (xuc OR xml OR xrg OR xit OR xow OR xts OR xsh OR xpk)]:
 ItemDisplay[!ID ELT MAG (uuc OR uml OR urg OR uow OR uts OR ush OR upk)]:
@@ -390,25 +388,25 @@ ItemDisplay[!RW ELT NMAG (bab OR bac OR bad OR bae OR baf)]:
 //ItemDisplay[!ID ELT MAG (bab OR bac OR bad OR bae OR baf)]:
 
 //Pala shields
-ItemDisplay[!RW NORM NMAG RES<30 (pa1 OR pa2 OR pa3 OR pa4 OR pa5)]:
-ItemDisplay[!RW EXC NMAG RES<30 (pa6 OR pa7 OR pa8 OR pa9 OR paa)]:
-ItemDisplay[!RW ELT NMAG ((ETH SUP) OR !ETH) RES<30 (pab OR pac OR pad OR pae OR paf)]:
+ItemDisplay[!RW NORM NMAG ((RES<30 AND CLVL>39) OR (RES<20 AND CLVL>23)) (pa1 OR pa2 OR pa3 OR pa4 OR pa5)]:
+ItemDisplay[!RW EXC NMAG ((RES<30 AND CLVL>39) OR (RES<20 AND CLVL>23)) (pa6 OR pa7 OR pa8 OR pa9 OR paa)]:
+ItemDisplay[!RW ELT NMAG ((RES<30 AND CLVL>39) OR (RES<20 AND CLVL>23)) ((ETH SUP) OR !ETH) (pab OR pac OR pad OR pae OR paf)]:
 ItemDisplay[!ID NORM MAG (pa1 OR pa2 OR pa3 OR pa4 OR pa5)]:
 ItemDisplay[!ID EXC MAG (pa6 OR pa7 OR pa8 OR pa9 OR paa)]:
 ItemDisplay[!ID ELT MAG (pab OR pac OR pad OR pae OR paf)]:
 
 //Necro heads
-ItemDisplay[!RW NORM NMAG (ne1 OR ne2 OR ne3 OR ne4 OR ne5)]:
-ItemDisplay[!RW EXC NMAG (ne6 OR ne7 OR ne8 OR ne9 OR nea)]:
-ItemDisplay[!RW ELT NMAG (neb OR nec OR ned OR nee OR nef)]:
+ItemDisplay[!RW NORM NMAG CLVL>34 (ne1 OR ne2 OR ne3 OR ne4 OR ne5)]:
+ItemDisplay[!RW EXC NMAG CLVL>54 (ne6 OR ne7 OR ne8 OR ne9 OR nea)]:
+ItemDisplay[!RW ELT NMAG CLVL>69 (neb OR nec OR ned OR nee OR nef)]:
 ItemDisplay[!ID NORM MAG (ne1 OR ne2 OR ne3 OR ne4 OR ne5)]:
 ItemDisplay[!ID EXC MAG (ne6 OR ne7 OR ne8 OR ne9 OR nea)]:
 ItemDisplay[!ID ELT MAG (neb OR nec OR ned OR nee OR nef)]:
 
 //Orbs
-ItemDisplay[!RW NORM NMAG (ob1 OR ob2 OR pb3 OR ob4 OR ob5)]:
-ItemDisplay[!RW EXC NMAG (ob6 OR ob7 OR ob8 OR ob9 OR oba)]:
-ItemDisplay[!RW ELT NMAG (obb OR obc OR obd OR obe OR obf)]:
+ItemDisplay[!RW NORM NMAG CLVL>34 (ob1 OR ob2 OR pb3 OR ob4 OR ob5)]:
+ItemDisplay[!RW EXC NMAG CLVL>54 (ob6 OR ob7 OR ob8 OR ob9 OR oba)]:
+ItemDisplay[!RW ELT NMAG CLVL>69 (obb OR obc OR obd OR obe OR obf)]:
 //ItemDisplay[!ID NORM MAG (ob1 OR ob2 OR pb3 OR ob4 OR ob5)]:
 //ItemDisplay[!ID EXC MAG (ob6 OR ob7 OR ob8 OR ob9 OR oba)]:
 //ItemDisplay[!ID ELT MAG (obb OR obc OR obd OR obe OR obf)]:
@@ -430,9 +428,9 @@ ItemDisplay[!ID EXC MAG (8ss OR 8ls OR 8cs OR 8bs OR 8ws)]:
 ItemDisplay[!ID ELT MAG (6ss OR 6ls OR 6cs OR 6bs OR 6ws)]:
 
 //Wands
-ItemDisplay[!RW NORM NMAG (wnd OR ywn OR bwn OR gwn)]:
-ItemDisplay[!RW EXC NMAG (9wn OR 9yw OR 9bw OR 9gw)]:
-ItemDisplay[!RW ELT NMAG (7wn OR 7yw OR 7bw OR 7gw)]:
+ItemDisplay[!RW NORM NMAG CLVL>34 (wnd OR ywn OR bwn OR gwn)]:
+ItemDisplay[!RW EXC NMAG CLVL>54 (9wn OR 9yw OR 9bw OR 9gw)]:
+ItemDisplay[!RW ELT NMAG CLVL>69 (7wn OR 7yw OR 7bw OR 7gw)]:
 ItemDisplay[!ID NORM MAG (wnd OR ywn OR bwn OR gwn)]:
 ItemDisplay[!ID EXC MAG (9wn OR 9yw OR 9bw OR 9gw)]:
 ItemDisplay[!ID ELT MAG (7wn OR 7yw OR 7bw OR 7gw)]:
@@ -446,10 +444,15 @@ ItemDisplay[!ID EXC MAG (9sc OR 9qs OR 9ws)]:
 ItemDisplay[!ID ELT MAG (7sc OR 7qs OR 7ws)]:
 
 //Claws
-ItemDisplay[!RW NORM NMAG (ktr OR wrb OR axf OR ces OR clw OR btl OR skr)]:
-ItemDisplay[!RW EXC NMAG (9ar OR 9wb OR 9xf OR 9cs OR 9lw OR 9tw OR 9qr)]:
-ItemDisplay[!RW ELT NMAG (7ar OR 7wb OR 7xf OR 7cs OR 7lw OR 7qr OR 7tw)]:
+ItemDisplay[!RW NORM NMAG CLVL>34 (ktr OR wrb OR axf OR ces OR clw OR btl OR skr)]:
+ItemDisplay[!RW EXC NMAG CLVL>54 (9ar OR 9wb OR 9xf OR 9cs OR 9lw OR 9tw OR 9qr)]:
+ItemDisplay[!RW ELT NMAG CLVL>69 (7ar OR 7wb OR 7xf OR 7cs OR 7lw OR 7qr OR 7tw)]:
 ItemDisplay[!ID NORM MAG (ktr OR wrb OR axf OR ces OR clw OR btl OR skr)]:
 ItemDisplay[!ID EXC MAG (9ar OR 9wb OR 9xf OR 9cs OR 9qr)]:
 ItemDisplay[!ID ELT MAG (7ar OR 7wb OR 7xf OR 7cs OR 7qr)]:
 
+
+
+
+//ItemDisplay[]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%WHITE%[%DARK_GREEN%Ø%PURPLE%Ø%RED%¥ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %RED%¥%PURPLE%Ø%DARK_GREEN%Ø%WHITE%]%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%DOT-4B%%PX-4B%%LINE-9B%%NOTIFY-B%
+//ItemDisplay[]: §   ©   µ   Ø   ×   ¶   ¥   ¤   ~
