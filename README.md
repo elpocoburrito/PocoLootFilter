@@ -2,7 +2,7 @@
 ## Installation
 1. Locate your Project Diablo 2 folder. It is usually under your original Diablo 2 folder in a folder named ***ProjectD2***.
 2. (Optional) If you already configured a filter, back it up now by renaming/copying your filter. Your filter name would probably be `loot.filter` or `default.filter`.
-3. To install a new filter, copy the filter to the `ProjectD2` folder and name it `loot.filter`. Make sure you have no `.txt` at the end of the file name. Sometime windows hides it. If you have a `.txt` at the end of the file, it can and will cause your filter not to work.
+3. To install a new filter, copy the [filter](https://raw.githubusercontent.com/rockbyo5/PocoLootFilter/main/default.filter) to the `ProjectD2` folder and name it `loot.filter`. Make sure you have no `.txt` at the end of the file name. Sometime windows hides it. If you have a `.txt` at the end of the file, it can and will cause your filter not to work.
 4. If you have not already, to enable the loot filter, go inside of a game and then control+click the small `settings` button in the bottom left of your screen.
 5. In the new window, you need to check the box next to **Advanced item display**.
 
