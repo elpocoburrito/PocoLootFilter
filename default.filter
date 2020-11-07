@@ -100,8 +100,8 @@ ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																						
 // ---------------------------
 
 //Notify for set, uniques and runewords drops
-ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-B%%CONTINUE%
-ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-E%%CONTINUE%
+ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-2%%CONTINUE%
+ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-4%%CONTINUE%
 ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
 
 //Append sockets and [eth] to socketed/eth items
