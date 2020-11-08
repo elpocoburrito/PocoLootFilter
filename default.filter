@@ -18,12 +18,12 @@ ItemDisplay[mp4 CLVL>35]:
 //Shorten item names, ignore junk
 ItemDisplay[tsc CLVL>29]:
 ItemDisplay[isc CLVL>29]:
-ItemDisplay[tsc]: %GREEN%-%WHITE%TP%GREEN%-
-ItemDisplay[isc]: %GREEN%-%WHITE%ID%GREEN%-
+ItemDisplay[tsc]: %DARK_GREEN%-%WHITE%TP%DARK_GREEN%-
+ItemDisplay[isc]: %DARK_GREEN%-%WHITE%ID%DARK_GREEN%-
 ItemDisplay[key]: %YELLOW%-%WHITE%Key%YELLOW%-
 ItemDisplay[vps CLVL<12]: %NAME% //Show stamina below lvl 12
 ItemDisplay[vps]: //Ignore stamina potions
-ItemDisplay[yps]: %GREEN%-%WHITE%Antidote%GREEN%-
+ItemDisplay[yps]: %DARK_GREEN%-%WHITE%A%DARK_GREEN%-
 ItemDisplay[wms]: //Ignore Thawing potion
 ItemDisplay[gps]: //Ignore Rancid Gas potion
 ItemDisplay[ops]: //Ignore Oil potion
