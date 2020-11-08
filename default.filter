@@ -53,7 +53,7 @@ ItemDisplay[cqv]:
 
 
 //Grand charms - Map marker+notification+sexier name.
-ItemDisplay[MAG !ID cm3]: %RED%Ø %BLUE%%NAME% %WHITE%[%BLUE%%ILVL%%WHITE%] %RED%Ø%MAP-97%%NOTIFY-3%
+ItemDisplay[MAG !ID (cm1 OR cm3)]: %RED%Ø %BLUE%%NAME% %WHITE%[%BLUE%%ILVL%%WHITE%] %RED%Ø%MAP-97%%NOTIFY-3%
 
 
 //Ignore small gold stacks, progressive system.
@@ -257,6 +257,12 @@ ItemDisplay[t16]: %NAME% [T6]%MAP-87% // Ruins of Viz-jun
 ItemDisplay[t17]: %NAME% [T7]%MAP-87% // River of Blood
 ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
 
+
+// ---------------------------
+// --      Craft items      --
+// ---------------------------
+
+//ItemDisplay[MAG AXE]
 
 
 // ---------------------------
