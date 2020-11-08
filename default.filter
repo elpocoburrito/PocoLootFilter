@@ -50,6 +50,12 @@ ItemDisplay[rvl]: %PURPLE%R%WHITE%2
 ItemDisplay[aqv]:
 ItemDisplay[cqv]:
 
+
+
+//Grand charms - Map marker+notification+sexier name.
+ItemDisplay[MAG !ID cm3]: %RED%Ø %BLUE%%NAME% %WHITE%[%BLUE%%ILVL%%WHITE%] %RED%Ø%MAP-97%%NOTIFY-3%
+
+
 //Ignore small gold stacks, progressive system.
 ItemDisplay[CLVL>19 CLVL<40 GOLD<20]:
 ItemDisplay[CLVL>39 CLVL<60 GOLD<50]:
@@ -118,9 +124,21 @@ ItemDisplay[NMAG ED=14]: %NAME% %BLUE%ED%WHITE%-%RED%14%CONTINUE%
 ItemDisplay[NMAG ED=15]: %NAME% %BLUE%ED%WHITE%-%RED%15%CONTINUE%
 
 //Append $ if the item has a value higher than 10k and player is below lvl 24, 20k and player below 45, 30k always
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %NAME%%CONTINUE%
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %NAME%%CONTINUE%
-ItemDisplay[(MAG OR NMAG OR RARE) CLVL>44 PRICE>29999]: %DARK_GREEN%$ %NAME%%CONTINUE%
+ItemDisplay[NMAG CLVL<24 PRICE>9999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[MAG CLVL<24 PRICE>9999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
+ItemDisplay[RARE CLVL<24 PRICE>9999]: %DARK_GREEN%$ %RARE%%NAME%%CONTINUE%
+
+ItemDisplay[NMAG CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[MAG CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
+ItemDisplay[RARE CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %RARE%%NAME%%CONTINUE%
+
+ItemDisplay[NMAG CLVL>44 PRICE>29999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>44 PRICE>29999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[MAG CLVL>44 PRICE>29999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
+ItemDisplay[RARE CLVL>44 PRICE>29999]: %DARK_GREEN%$ %RARE%%NAME%%CONTINUE%
+
 
 
 // ------------------------------
@@ -238,6 +256,11 @@ ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Map
 ItemDisplay[t16]: %NAME% [T6]%MAP-87% // Ruins of Viz-jun
 ItemDisplay[t17]: %NAME% [T7]%MAP-87% // River of Blood
 ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
+
+
+// ---------------------------
+// --      Great items      --
+// ---------------------------
 
 
 // ---------------------------
