@@ -262,8 +262,25 @@ ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
 // --      Craft items      --
 // ---------------------------
 
-//ItemDisplay[MAG AXE]
 
+//Blood Reciepe
+ItemDisplay[MAG (hlm OR xlm OR ulm)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %RED%PRuby} //Blood helms
+ItemDisplay[MAG (vgl OR xvg OR uvg)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %RED%PRuby} //Blood gloves
+ItemDisplay[MAG (mbl OR zmb OR umc)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %RED%PRuby} //Blood belts
+ItemDisplay[MAG (tbt OR xtb OR utb)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Eth %WHITE%+ %RED%PRuby} //Blood boots
+
+
+//Caster Receipe
+ItemDisplay[MAG (lgl OR xlg OR ulg)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %PURPLE%PAmethyst} //Caster gloves
+ItemDisplay[MAG (vbl OR zvb OR uvc)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ith %WHITE%+ %PURPLE%PAmethyst} //Caster belt
+ItemDisplay[MAG (lbt OR xlb OR ulb)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Thul %WHITE%+ %PURPLE%PAmethyst} //Caster boots
+
+
+//Safety Receipe
+ItemDisplay[MAG (hgl OR xhg OR uhg)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG (lbl OR zlb OR ulc)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG (hbt OR xhb OR uhb)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG (kit OR xit OR uit)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %GREEN%PEmerald}
 
 // ---------------------------
 // --      Class items      --
