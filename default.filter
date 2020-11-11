@@ -224,6 +224,15 @@ ItemDisplay[dhn]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open
 ItemDisplay[mbr]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
 
 
+// ---------------------------
+// [QICR] Diablo Clone
+// ---------------------------
+ItemDisplay[dcma]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
+ItemDisplay[dcbl]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
+ItemDisplay[dcho]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
+ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
+
+
 // +--------------------------
 // |     [PD2N] Map Items     
 // +--------------------------
@@ -261,8 +270,6 @@ ItemDisplay[t18]: %NAME% [T8]%MAP-87% // Lava Map
 // ---------------------------
 // --      Craft items      --
 // ---------------------------
-
-
 //Blood Reciepe
 ItemDisplay[MAG (hlm OR xlm OR ulm)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %RED%PRuby} //Blood helms
 ItemDisplay[MAG (vgl OR xvg OR uvg)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %RED%PRuby} //Blood gloves
@@ -282,10 +289,10 @@ ItemDisplay[MAG (lbl OR zlb OR ulc)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAM
 ItemDisplay[MAG (hbt OR xhb OR uhb)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %GREEN%PEmerald}
 ItemDisplay[MAG (kit OR xit OR uit)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %GREEN%PEmerald}
 
+
 // ---------------------------
 // --      Class items      --
 // ---------------------------
-
 //Paladin shields
 ItemDisplay[DIN NMAG RES>29 RES<36]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%GRAY%30-35%WHITE%)
 ItemDisplay[DIN NMAG RES>35 RES<41]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%RED%36-40%WHITE%)%MAP%%NOTIFY-8%
@@ -304,12 +311,11 @@ ItemDisplay[DIN NMAG RES=45]: %NAME% %RED%@%DARK_GREEN%res%WHITE%(%GRAY%45%WHITE
 // -- hide useful items unless you consider white/gray/magic      --
 // -- class items useful (it doesnt hide all class items)         --
 //------------------------------------------------------------------
-
 //ItemDisplay[(AXE OR MACE OR SWORD OR DAGGER OR THROWING OR JAV OR SPEAR OR POLEARM OR BOW OR XBOX OR STAFF OR WAND OR SCEPTER)]:
 //Hides all NMAG with no 2,3,4,5,6 sockets varying per level and difficulty. (exception for crystal swords and broad swords that can be larzuk for 4os
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) !RW NORM NMAG CLVL>34 ((!SOCK=2 OR !SOCK=3 OR !SOCK=4) !(crs (SOCK=0 ILVL>25 ILVL<41)) !(bsd (SOCK=0 AND ILVL>25)))]:
-ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) !RW EXC NMAG CLVL>49 !((9s8 OR 9vo) SOCK=0)(!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
-ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) !RW ELT NMAG (!(7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 72h) SOCK=0) (!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
+ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) !RW EXC NMAG CLVL>49 !((9s8 OR 9vo) SOCK=0) (!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
+ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) !RW ELT NMAG !((7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 72h OR uit) (SOCK=0 OR SOCK=4)) (!SOCK=2 OR !SOCK=3 OR !SOCK=4 OR !SOCK=5 OR !SOCK=6)]:
 
 //Hides all non-Class MAG items depending on tier and player level.
 ItemDisplay[(WEAPON OR ARMOR) MAG NORM CLVL>34]:
@@ -321,6 +327,7 @@ ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG NORM CLVL>44]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG EXC CLVL>54]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG ELT CLVL>64]:
 
-ItemDisplay[CLVL>5 INF]:
+ItemDisplay[CLVL>9 !RW INF]:
+ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) NMAG SOCK=1 CLVL>23]:
 
 //ItemDisplay[]: §   ©   µ   Ø   ×   ¶   ¥   ¤   ~
