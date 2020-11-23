@@ -415,7 +415,7 @@ ItemDisplay[NMAG !INF !RW SIN EXC !SOCK=1 !ETH]: %NAME%
 //Elite Bases
 //-----------
 //Polearms/Spears - Hell
-ItemDisplay[NMAG !INF !RW (7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 7p7) ((SOCK=3 OR SOCK=4 OR SOCK=5 OR SOCK=6) OR (SOCK=0 (ED>9 OR ETH))]: %NAME%
+ItemDisplay[NMAG !INF !RW (7vo OR 7s8 OR 7pa OR 7h7 OR 7br OR 7tr OR 7p7) ((SOCK=3 OR SOCK=4 OR SOCK=5 OR SOCK=6) OR (SOCK=0 (ED>9 OR ETH)))]: %NAME%
 
 //1H Axes - Hell
 ItemDisplay[NMAG !INF !RW 7wa (SOCK=2 OR SOCK=3 OR SOCK=4 OR SOCK=5)]: %NAME%
