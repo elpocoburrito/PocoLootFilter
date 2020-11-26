@@ -52,8 +52,8 @@ ItemDisplay[cqv]:
 
 
 
-//Grand charms - Map marker+notification+sexier name.
-ItemDisplay[MAG !ID (cm1 OR cm3)]: %RED%Ø %BLUE%%NAME% %WHITE%[%BLUE%%ILVL%%WHITE%] %RED%Ø%MAP-97%%NOTIFY-3%
+//Grand charms and small charms - Map marker+notification+sexier name.
+ItemDisplay[MAG !ID (cm1 OR cm3)]: %RED%Ø %BLUE%%NAME% %RED%Ø%MAP-97%%NOTIFY-3%%CONTINUE%
 
 
 //Ignore small gold stacks, progressive system.
@@ -92,13 +92,13 @@ ItemDisplay[GEMTYPE=7]: %NAME%%ORANGE%Skull //Skulls
 ItemDisplay[GEM>0 QTY>1]: %NAME% %WHITE%x%QTY%%CONTINUE% // Shows the quantity of gems in a stack
 
 //Display prettier runes with rune number in name
-ItemDisplay[RUNE<14]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																									//el-shael
+ItemDisplay[RUNE<14]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																//el-shael
 ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%											//dol-fal
 ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¥%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
 ItemDisplay[RUNE>22]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%PURPLE%ØØ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %PURPLE%ØØ%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%NOTIFY-B%		//mal-zod
 
 //Append quantity after stacks
-ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																												// Shows the quantity of runes in a stack
+ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																										// Shows the quantity of runes in a stack
 
 
 // ---------------------------
@@ -136,22 +136,22 @@ ItemDisplay[NMAG ED=14]: %NAME% %BLUE%ED%WHITE%-%RED%14%CONTINUE%
 ItemDisplay[NMAG ED=15]: %NAME% %BLUE%ED%WHITE%-%RED%15%CONTINUE%
 
 //Append $ if the item has a value higher than 10k and player is below lvl 24, 20k and player below 45, 30k always
-ItemDisplay[NMAG CLVL<24 PRICE>9999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
-ItemDisplay[NMAG (ETH OR SOCK>0) CLVL<24 PRICE>9999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[NMAG CLVL<24 PRICE>9999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL<24 PRICE>9999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
 ItemDisplay[MAG CLVL<24 PRICE>9999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE CLVL<24 PRICE>9999]: %DARK_GREEN%$ %YELLOW%%NAME%%CONTINUE%
 
-ItemDisplay[NMAG CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
-ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[NMAG CLVL>23 CLVL<45 PRICE>19999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>23 CLVL<45 PRICE>19999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
 ItemDisplay[MAG CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE CLVL>23 CLVL<45 PRICE>19999]: %DARK_GREEN%$ %YELLOW%%NAME%%CONTINUE%
 
-ItemDisplay[NMAG CLVL>44 PRICE>34999]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
-ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>44 PRICE>34999]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
+ItemDisplay[NMAG CLVL>44 PRICE>34999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG (ETH OR SOCK>0) CLVL>44 PRICE>34999 !pk1 !pk2 !pk3]: %DARK_GREEN%$ %GRAY%%NAME%%CONTINUE%
 ItemDisplay[MAG CLVL>44 PRICE>34999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE CLVL>44 PRICE>34999]: %DARK_GREEN%$ %YELLOW%%NAME%%CONTINUE%
 
-
+ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%%ILVL%%WHITE%]%CONTINUE%
 
 // ------------------------------
 // [QUES]    Quest Items	   //
@@ -223,26 +223,27 @@ ItemDisplay[toa]: %ORANGE%%NAME%%MAP-68%{%TAN%Right click to reset stats & skill
 // ---------------------------
 // [QIKE] Pandemonium Keys
 // ---------------------------
-ItemDisplay[pk3]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
-ItemDisplay[pk2]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
-ItemDisplay[pk1]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR 3 SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
+ItemDisplay[(pk1 OR pk2 OR pk3) QTY>1]: %NAME% %WHITE%[%RED%%QTY%%WHITE%]%CONTINUE%
+ItemDisplay[pk3]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
+ItemDisplay[pk2]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
+ItemDisplay[pk1]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
 
 
 // ---------------------------
 // [QIOR] Pandemonium Organs
 // ---------------------------
-ItemDisplay[bey]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
-ItemDisplay[dhn]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
-ItemDisplay[mbr]: %ORANGE%%NAME%%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
+ItemDisplay[bey]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
+ItemDisplay[dhn]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
+ItemDisplay[mbr]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
 
 
 // ---------------------------
 // [QICR] Diablo Clone
 // ---------------------------
-ItemDisplay[dcma]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
-ItemDisplay[dcbl]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
-ItemDisplay[dcho]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
-ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
+ItemDisplay[dcma]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn diablo clone}
+ItemDisplay[dcbl]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn diablo clone}
+ItemDisplay[dcho]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn diablo clone}
+ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn diablo clone}
 
 
 // +--------------------------
@@ -251,19 +252,19 @@ ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++
 // ---------------------------
 // [CORR] Corruption Items
 // ---------------------------
-ItemDisplay[wss]: %PURPLE%+%RED%%NAME%%MAP-62% // Worldstone Shard
+ItemDisplay[wss]: %PURPLE%+%RED%%NAME%{%TAN%If item has or cant have sockets, 1/2 brick%NL%1/4 to roll sockets%NL%1/4 to brick%NL%1/2 to roll modifier}%MAP-62% // Worldstone Shard
 ItemDisplay[lbox]: %PURPLE%+%RED%%NAME%%MAP-62% // Larzuk's Box
 
 
 // ---------------------------
 // [MAPI] Map Items
 // ---------------------------
-ItemDisplay[rera]: %NAME%{%TAN%Cube w/ Perfect Gem, Thul Rune or Greater, & Rare Map}%DOT-80% // Reroll Rare Map (Horadrim Orb)
-ItemDisplay[imra]: %NAME%{%TAN%Cube w/ Jewel, Thul Rune or Greater, & White Map}%DOT-80% // Imbue Rare Map (Zakarum Orb)
-ItemDisplay[upma]: %NAME%{%TAN%Cube w/ Perfect Skull, Thul Rune or Greater, & Magic Map}%DOT-80% // Upgrade Magic Map to Rare Map (Angelic Orb)
-ItemDisplay[imma]: %NAME%{%TAN%Cube w/ Jewel, Any Rune, & White Map}%DOT-80% // Imbue Magic Map (Arcane Orb)
+ItemDisplay[rera]: %NAME%{%TAN%Cube w/ Perfect Gem, Thul Rune or Greater, & Rare Map%NL%Reroll Rare Map}%DOT-80% // (Horadrim Orb)
+ItemDisplay[imra]: %NAME%{%TAN%Cube w/ Jewel, Thul Rune or Greater, & White Map%NL%Imbue Rare Map}%DOT-80% // (Zakarum Orb)
+ItemDisplay[upma]: %NAME%{%TAN%Cube w/ Perfect Skull, Thul Rune or Greater, & Magic Map%NL%Upgrade Magic Map to Rare Map}%DOT-80% // (Angelic Orb)
+ItemDisplay[imma]: %NAME%{%TAN%Cube w/ Jewel, Any Rune, & White Map%NL%Imbue to Magic Map}%DOT-80% // (Arcane Orb)
 //ItemDisplay[???]: %NAME%{%TAN%Cube w/ Jewel & White Map}%DOT-80% // Imbue Random Rarity (Demonic Cube)
-ItemDisplay[scou]: %NAME%{%TAN%Cube w/ Hel Rune & Magic or Rare Map}%DOT-80% // Purge Map (Removes Mods and Reverts back to a White Map) (Orb of Destruction)
+ItemDisplay[scou]: %NAME%{%TAN%Cube w/ Hel Rune & Magic or Rare Map%NL%Purge Map (Removes Mods and Reverts back to a White Map)}%DOT-80% // (Orb of Destruction)
 
 
 // ---------------------------
@@ -275,8 +276,8 @@ ItemDisplay[t13]: %NAME% [T3]%MAP-87% // Map
 ItemDisplay[t14]: %NAME% [T4]%MAP-87% // Map
 ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Map
 ItemDisplay[t16]: %NAME% [T1]%MAP-87% // Ruins of Viz-jun
-ItemDisplay[t17]: %NAME% [T2]%MAP-87% // River of Blood
-ItemDisplay[t18]: %NAME% [T3]%MAP-87% // Lava Map
+ItemDisplay[t18]: %NAME% [T2]%MAP-87% // Lava Map
+ItemDisplay[t17]: %NAME% [T3]%MAP-87% // River of Blood
 
 
 // ---------------------------
