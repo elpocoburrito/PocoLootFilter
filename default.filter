@@ -106,6 +106,9 @@ ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																						
 // --      Append info      --
 // ---------------------------
 
+//Makes good uniques more visible and easier to click on (incomplete list - to improve)
+ItemDisplay[UNI !ID (gix OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba)]: %RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ
+
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-2%%CONTINUE%
 ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-4%%CONTINUE%
@@ -285,10 +288,6 @@ ItemDisplay[t17]: %NAME% [T3]%MAP-87% // River of Blood
 // --      Craft items      --
 // ---------------------------
 
-
-
-
-
 //Blood Reciepe
 ItemDisplay[MAG (hlm OR xlm OR ulm)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %RED%PRuby} //Blood helms
 ItemDisplay[MAG (vgl OR xvg OR uvg)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %RED%PRuby} //Blood gloves
@@ -311,6 +310,7 @@ ItemDisplay[MAG (kit OR xit OR uit)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAM
 
 //Caster+Blood Receipe
 ItemDisplay[MAG (DRU OR BAR)]: %WHITE%[%ORANGE%Craft-C/B%WHITE%] %BLUE%%NAME%{%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PRuby%NL%%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %PURPLE%PAmethyst}
+
 
 // ---------------------------
 // --      Class items      --
