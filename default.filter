@@ -107,7 +107,7 @@ ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																						
 // ---------------------------
 
 //Makes good uniques more visible and easier to click on (incomplete list - to improve)
-ItemDisplay[UNI !ID (gix OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba)]: %RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии
+ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba)]: %RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии
 
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-2%%CONTINUE%
