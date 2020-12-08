@@ -1,3 +1,13 @@
+// ---------------
+// --    Todo   --
+// ---------------
+//Add set name to set items
+//Refine the Good Unique Hyping line (GUH)
+//Display good skills on good class items
+//Fix essence "Description too long"
+
+
+
 
 // ---------------------------
 // --       Misc Items      --
@@ -107,7 +117,18 @@ ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																						
 // ---------------------------
 
 //Makes good uniques more visible and easier to click on (incomplete list - to improve)
-ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba)]: %RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ
+ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ
+
+//Leveling Axes
+//ItemDisplay[UNI !ID (hax OR 2ax OR btx OR gax OR 9ha OR 9ax OR 9mp OR 9wa OR 9la OR 9bt OR 9ga OR 7ha OR 72a OR 7mp OR 7wa OR 7ba OR 7bt OR 7ga OR )]:
+
+//Leveling swords
+//ItemDisplay[UNI !ID (sbr OR bsd OR crs OR 9ss OR 9sm OR 9sb OR 9ls OR 92h OR 9cm OR 9gs OR 7sb OR 7ls OR 7gs OR 7b7 OR 7gd)]:
+
+//GG Swords (light sabre)
+//ItemDisplay[UNI !ID (7cr)]:
+//ItemDisplay[UNI !ID ()]:
+
 
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-2%%CONTINUE%
@@ -289,27 +310,24 @@ ItemDisplay[t17]: %NAME% [T3]%MAP-87% // River of Blood
 // ---------------------------
 
 //Blood Reciepe
-ItemDisplay[MAG (hlm OR xlm OR ulm)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %RED%PRuby} //Blood helms
-ItemDisplay[MAG (vgl OR xvg OR uvg)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %RED%PRuby} //Blood gloves
-ItemDisplay[MAG (mbl OR zmb OR umc)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %RED%PRuby} //Blood belts
-ItemDisplay[MAG (tbt OR xtb OR utb)]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Eth %WHITE%+ %RED%PRuby} //Blood boots
-ItemDisplay[MAG ZON]: %WHITE%[%ORANGE%Craft-B%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %RED%PRuby}
+ItemDisplay[MAG ID HELM]: %BLUE%%NAME%{%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %RED%PRuby} //Blood helms
+ItemDisplay[MAG ID ZON]: %BLUE%%NAME%{%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %RED%PRuby}
 
 //Caster Receipe
-ItemDisplay[MAG (lgl OR xlg OR ulg)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %PURPLE%PAmethyst} //Caster gloves
-ItemDisplay[MAG (vbl OR zvb OR uvc)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ith %WHITE%+ %PURPLE%PAmethyst} //Caster belt
-ItemDisplay[MAG (lbt OR xlb OR ulb)]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Thul %WHITE%+ %PURPLE%PAmethyst} //Caster boots
-ItemDisplay[MAG NEC]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Eth %WHITE%+ %PURPLE%PAmethyst} //Caster Nec shields
-ItemDisplay[MAG SIN]: %WHITE%[%ORANGE%Craft-C%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tir %WHITE%+ %PURPLE%PAmethyst}
+ItemDisplay[MAG ID NEC]: %BLUE%%NAME%{%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Eth %WHITE%+ %PURPLE%PAmethyst} //Caster Nec shields
+ItemDisplay[MAG ID SIN]: %BLUE%%NAME%{%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tir %WHITE%+ %PURPLE%PAmethyst}
 
 //Safety Receipe
-ItemDisplay[MAG (hgl OR xhg OR uhg)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PEmerald}
-ItemDisplay[MAG (lbl OR zlb OR ulc)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %GREEN%PEmerald}
-ItemDisplay[MAG (hbt OR xhb OR uhb)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %GREEN%PEmerald}
-ItemDisplay[MAG (kit OR xit OR uit)]: %WHITE%[%ORANGE%Craft-S%WHITE%] %BLUE%%NAME%{%LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG ID (hgl OR xhg OR uhg)]: %BLUE%%NAME%{%ORANGE%Safety %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG ID (lbl OR zlb OR ulc)]: %BLUE%%NAME%{%ORANGE%Safety %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG ID (hbt OR xhb OR uhb)]: %BLUE%%NAME%{%ORANGE%Safety %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %GREEN%PEmerald}
+ItemDisplay[MAG ID (kit OR xit OR uit)]: %BLUE%%NAME%{%ORANGE%Safety %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %GREEN%PEmerald}
 
 //Caster+Blood Receipe
-ItemDisplay[MAG (DRU OR BAR)]: %WHITE%[%ORANGE%Craft-C/B%WHITE%] %BLUE%%NAME%{%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PRuby%NL%%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %PURPLE%PAmethyst}
+ItemDisplay[MAG ID (DRU OR BAR)]: %BLUE%%NAME%{%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ral %WHITE%+ %GREEN%PRuby%NL%%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %PURPLE%PAmethyst}
+ItemDisplay[MAG ID GLOVES]: %BLUE%%NAME%{%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ort %WHITE%+ %PURPLE%PAmethyst%NL%%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Nef %WHITE%+ %RED%PRuby} //Caster gloves
+ItemDisplay[MAG ID BELT]: %BLUE%%NAME%{%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Ith %WHITE%+ %PURPLE%PAmethyst%NL%%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Tal %WHITE%+ %RED%PRuby} //Caster belt
+ItemDisplay[MAG ID BOOTS]: %BLUE%%NAME%{%ORANGE%Caster %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Thul %WHITE%+ %PURPLE%PAmethyst%NL%%ORANGE%Blood %LIGHT_GRAY%Magic/Rare %BLUE%jewel %WHITE%+ %ORANGE%Eth %WHITE%+ %RED%PRuby} //Caster boots
 
 
 // ---------------------------
@@ -493,7 +511,20 @@ ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG NORM CLVL>44]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG EXC CLVL>54]:
 ItemDisplay[(DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) MAG ELT CLVL>64]:
 
+
+//Hide rare weapons from normal and nightmare
+ItemDisplay[RARE !ID (NORM OR EXC) WEAPON !WAND !STAFF !SIN !SOR !ZON CLVL>64]:
+ItemDisplay[RARE !ID (NORM OR EXC) (HELM OR CHEST OR SHIELD) !DRU !BAR !NEC CLVL>64]:
+
+
 ItemDisplay[CLVL>9 !RW INF]:
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) NMAG SOCK=1 CLVL>23]:
+
+
+
+
+
+
+
 
 //ItemDisplay[]: §   ©   µ   Ø   ×   ¶   ¥   ¤   ~
