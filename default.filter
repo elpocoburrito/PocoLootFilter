@@ -87,8 +87,8 @@ ItemDisplay[GEM=3 CLVL>29]:
 ItemDisplay[gcv OR gcw OR gcg OR gcr OR gcb OR skc OR gcy]: %WHITE%C- %CONTINUE%
 ItemDisplay[gfv OR gfw OR gfg OR gfr OR gfb OR skf OR gfy]: %BLUE%F- %CONTINUE%
 ItemDisplay[gsv OR gsw OR gsg OR gsr OR gsb OR sku OR gsy]: %YELLOW%N- %CONTINUE%
-ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR skl OR gly) OR GEM=4]: %GREEN%F+ %CONTINUE%
-ItemDisplay[(gpv OR gpw OR gpg OR gpr OR gpb OR skz OR gpy) OR GEM=5]: %PURPLE%P+ %CONTINUE%
+ItemDisplay[(gzv OR glw OR glg OR glr OR glb OR skl OR gly) OR GEM=4]: %GREEN%F+%DOT-A9% %CONTINUE%
+ItemDisplay[(gpv OR gpw OR gpg OR gpr OR gpb OR skz OR gpy) OR GEM=5]: %PURPLE%P+%DOT-A9% %CONTINUE%
 
 //add gem type after the gem tier
 ItemDisplay[GEMTYPE=1]: %NAME%%ORANGE%Amethyst //Amethysts
@@ -233,33 +233,33 @@ ItemDisplay[tr2]: %NAME%%MAP-00%{%TAN%Right click for a permanent All Resistance
 // ---------------------------
 // [QIES] Essences
 // ---------------------------
-ItemDisplay[tes]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with ghostly boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Twisted Essence of Suffering
-ItemDisplay[ceh]: %ORANGE%%NAME%%MAP-00%{%TAN%This is ghostly boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, angry boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Charged Essence of Hatred
-ItemDisplay[bet]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%hentai boy's essence.%NL%} // Burning Essence of Terror
-ItemDisplay[fed]: %ORANGE%%NAME%%MAP-00%{%TAN%This is SexyPrincess22/Nasty boy's essence.%NL%%TAN%Cube with SexyPrincess22/Nasty boy's essence, ghostly boy's essence and%NL%%TAN%angry boy's essence.%NL%} // Festering Essence of Destruction
+ItemDisplay[tes]: %ORANGE%%NAME%%MAP-62%{%TAN%This is Andy/Duriel's essence.%NL%%TAN%Cube with essences from Meph, Diablo and Baal.%NL%} // Twisted Essence of Suffering
+ItemDisplay[ceh]: %ORANGE%%NAME%%MAP-62%{%TAN%This is Meph's essence.%NL%%TAN%Cube with essences from Andy/Duriel, Diablo and Baal.%NL%} // Charged Essence of Hatred
+ItemDisplay[bet]: %ORANGE%%NAME%%MAP-62%{%TAN%This is Diablo's essence.%NL%%TAN%Cube with essences from Andy/Duriel, Meph and Baal.%NL%} // Burning Essence of Terror
+ItemDisplay[fed]: %ORANGE%%NAME%%MAP-62%{%TAN%This is Baal's essence.%NL%%TAN%Cube with essences from Andy/Duriel, Meph and Diablo.%NL%} // Festering Essence of Destruction
 
 
 // ---------------------------
 // [QITO] Tokens
 // ---------------------------
-ItemDisplay[toa]: %ORANGE%%NAME%%MAP-68%{%TAN%Right click to reset stats & skills%NL%} // Token of Absolution
+ItemDisplay[toa]: %ORANGE%%NAME%%MAP-62%%PX-68%{%TAN%Right click to reset stats & skills%NL%} // Token of Absolution
 
 
 // ---------------------------
 // [QIKE] Pandemonium Keys
 // ---------------------------
 ItemDisplay[(pk1 OR pk2 OR pk3) QTY>1]: %NAME% %WHITE%[%RED%%QTY%%WHITE%]%CONTINUE%
-ItemDisplay[pk3]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
-ItemDisplay[pk2]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
-ItemDisplay[pk1]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
+ItemDisplay[pk3]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube w/ Hate + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Destruction
+ItemDisplay[pk2]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube w/ Destruction + Terror keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Hate
+ItemDisplay[pk1]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube w/ Destruction + Hate keys in Act 5%NL%%RED%MAKE SURE TO CUBE YOUR SETS IN DIFFERENT LOCATIONS%NL%} // Key of Terror
 
 
 // ---------------------------
 // [QIOR] Pandemonium Organs
 // ---------------------------
-ItemDisplay[bey]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
-ItemDisplay[dhn]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
-ItemDisplay[mbr]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
+ItemDisplay[bey]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Baal's Eye
+ItemDisplay[dhn]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Diablo's Horn
+ItemDisplay[mbr]: %ORANGE%+++ %RED%%NAME% %ORANGE%+++%MAP-62%%PX-68%{%TAN%Cube any 3 organs in Act 5 to open Uber Trist%NL%} // Mephisto's Brain
 
 
 // ---------------------------
@@ -277,8 +277,8 @@ ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn dia
 // ---------------------------
 // [CORR] Corruption Items
 // ---------------------------
-ItemDisplay[wss]: %PURPLE%+%RED%%NAME%{%TAN%If item has or cant have sockets, 1/2 brick%NL%1/4 to roll sockets%NL%1/4 to brick%NL%1/2 to roll modifier}%MAP-62% // Worldstone Shard
-ItemDisplay[lbox]: %PURPLE%+%RED%%NAME%%MAP-62% // Larzuk's Box
+ItemDisplay[wss]: %PURPLE%++ %NAME% %PURPLE%++{%TAN%If item has or cant have sockets, 1/2 brick%NL%1/4 to roll sockets%NL%1/4 to brick%NL%1/2 to roll modifier}%MAP-9B%%PX-62% // Worldstone Shard
+ItemDisplay[lbox]: %PURPLE%++%RED%+ %NAME% %RED%+%PURPLE%++%MAP-62% // Larzuk's Box
 
 
 // ---------------------------
@@ -295,14 +295,18 @@ ItemDisplay[scou]: %NAME%{%TAN%Cube w/ Hel Rune & Magic or Rare Map%NL%Purge Map
 // ---------------------------
 // [MAPI] Maps
 // ---------------------------
-ItemDisplay[t11]: %NAME% [T1]%MAP-87% // Map
-ItemDisplay[t12]: %NAME% [T2]%MAP-87% // Map
-ItemDisplay[t13]: %NAME% [T3]%MAP-87% // Map
-ItemDisplay[t14]: %NAME% [T4]%MAP-87% // Map
-ItemDisplay[t15]: %NAME% [T5]%MAP-87% // Map
-ItemDisplay[t16]: %NAME% [T1]%MAP-87% // Ruins of Viz-jun
-ItemDisplay[t18]: %NAME% [T2]%MAP-87% // Lava Map
-ItemDisplay[t17]: %NAME% [T3]%MAP-87% // River of Blood
+ItemDisplay[t11]: %NAME% %PX-A7% // Map
+ItemDisplay[t12]: %NAME% %PX-A7% // Map
+ItemDisplay[t13]: %NAME% %PX-A7% // Map
+ItemDisplay[t14]: %NAME% %MAP-87% // Map
+ItemDisplay[t15]: %NAME% %MAP-87% // Map
+
+ItemDisplay[t16]: %NAME% %ORANGE%[T1]%CONTINUE% // Ruins of Viz-jun
+ItemDisplay[t18]: %NAME% [T2]%CONTINUE%// Lava Map
+ItemDisplay[t17]: %NAME% [T3]%CONTINUE% // River of Blood
+
+ItemDisplay[MAG (t16 OR t17 OR t18)]: %NAME%%DOT-93%%MAP-1F%
+ItemDisplay[RARE (t16 OR t17 OR t18)]: %NAME%%DOT-69%%MAP-1F%
 
 
 // ---------------------------
@@ -519,10 +523,6 @@ ItemDisplay[RARE !ID (NORM OR EXC) (HELM OR CHEST OR SHIELD) !DRU !BAR !NEC CLVL
 
 ItemDisplay[CLVL>9 !RW INF]:
 ItemDisplay[(WEAPON OR ARMOR OR DRU OR BAR OR DIN OR NEC OR SIN OR SOR OR ZON) NMAG SOCK=1 CLVL>23]:
-
-
-
-
 
 
 
