@@ -97,7 +97,7 @@ ItemDisplay[GEMTYPE=2]: %NAME%%ORANGE%Diamond //Diamonds
 ItemDisplay[GEMTYPE=3]: %NAME%%ORANGE%Emerald //Emeralds
 ItemDisplay[GEMTYPE=4]: %NAME%%ORANGE%Ruby //Rubies
 ItemDisplay[GEMTYPE=5]: %NAME%%ORANGE%Sapphire //Sapphires
-ItemDisplay[GEMTYPE=6]: %NAME%%ORANGE%Topaze //Topazes
+ItemDisplay[GEMTYPE=6]: %NAME%%ORANGE%Topaz //Topazes
 ItemDisplay[GEMTYPE=7]: %NAME%%ORANGE%Skull //Skulls
 
 //Append quantity after stacks
