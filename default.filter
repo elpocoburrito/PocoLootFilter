@@ -178,7 +178,7 @@ ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%
 // ---------------------------
 
 //Makes good uniques more visible and easier to click on (incomplete list - to improve)
-ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии
+ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3 OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%иии%ORANGE%ЄЄЄЄЄ%RED%иии
 
 //Leveling Axes
 //ItemDisplay[UNI !ID (hax OR 2ax OR btx OR gax OR 9ha OR 9ax OR 9mp OR 9wa OR 9la OR 9bt OR 9ga OR 7ha OR 72a OR 7mp OR 7wa OR 7ba OR 7bt OR 7ga OR )]:
