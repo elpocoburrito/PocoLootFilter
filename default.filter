@@ -117,36 +117,22 @@ ItemDisplay[RUNE>0 QTY>0]: %NAME% %WHITE%x%QTY%%CONTINUE% 																						
 // --      Append info      --
 // ---------------------------
 
-//Makes good uniques more visible and easier to click on (incomplete list - to improve)
-ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ
-
-//Leveling Axes
-//ItemDisplay[UNI !ID (hax OR 2ax OR btx OR gax OR 9ha OR 9ax OR 9mp OR 9wa OR 9la OR 9bt OR 9ga OR 7ha OR 72a OR 7mp OR 7wa OR 7ba OR 7bt OR 7ga OR )]:
-
-//Leveling swords
-//ItemDisplay[UNI !ID (sbr OR bsd OR crs OR 9ss OR 9sm OR 9sb OR 9ls OR 92h OR 9cm OR 9gs OR 7sb OR 7ls OR 7gs OR 7b7 OR 7gd)]:
-
-//GG Swords (light sabre)
-//ItemDisplay[UNI !ID (7cr)]:
-//ItemDisplay[UNI !ID ()]:
-
-
 //Notify for set, uniques and runewords drops
 ItemDisplay[SET]: %NAME%%MAP-83%%NOTIFY-2%%CONTINUE%
 ItemDisplay[UNI]: %NAME%%MAP-53%%NOTIFY-4%%CONTINUE%
 ItemDisplay[RW]: %NAME%%MAP-1F%%NOTIFY-F%%CONTINUE%
 
-ItemDisplay[SET NORM WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%
-ItemDisplay[UNI NORM WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%
+ItemDisplay[SET NORM WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+ItemDisplay[UNI NORM WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
 
-ItemDisplay[SET EXC WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%
-ItemDisplay[UNI EXC WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%
+ItemDisplay[SET EXC WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+ItemDisplay[UNI EXC WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
 
-ItemDisplay[SET NORM ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%
-ItemDisplay[UNI NORM ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%
+ItemDisplay[SET NORM ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+ItemDisplay[UNI NORM ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
 
-ItemDisplay[SET EXC ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%
-ItemDisplay[UNI EXC ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%
+ItemDisplay[SET EXC ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+ItemDisplay[UNI EXC ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
 
 //Append sockets and [eth] to socketed/eth items
 ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
@@ -186,6 +172,44 @@ ItemDisplay[MAG CLVL>44 PRICE>34999]: %DARK_GREEN%$ %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE CLVL>44 PRICE>34999]: %DARK_GREEN%$ %YELLOW%%NAME%%CONTINUE%
 
 ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%%ILVL%%WHITE%]%CONTINUE%
+
+// ---------------------------
+// --        Uniques        --
+// ---------------------------
+
+//Makes good uniques more visible and easier to click on (incomplete list - to improve)
+ItemDisplay[UNI !ID (uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ%NL%%GOLD%---- %NAME% %GOLD%----%NL%%RED%ØØØ%ORANGE%¤¤¤¤¤%RED%ØØØ
+
+//Leveling Axes
+//ItemDisplay[UNI !ID (hax OR 2ax OR btx OR gax OR 9ha OR 9ax OR 9mp OR 9wa OR 9la OR 9bt OR 9ga OR 7ha OR 72a OR 7mp OR 7wa OR 7ba OR 7bt OR 7ga OR )]:
+
+//Leveling swords
+//ItemDisplay[UNI !ID (sbr OR bsd OR crs OR 9ss OR 9sm OR 9sb OR 9ls OR 92h OR 9cm OR 9gs OR 7sb OR 7ls OR 7gs OR 7b7 OR 7gd)]:
+
+//GG Swords (light sabre)
+//ItemDisplay[UNI !ID (7cr)]:
+//ItemDisplay[UNI !ID ()]:
+
+
+// ---------------------------
+// --         Sets          --
+// ---------------------------
+
+ItemDisplay[SET !ID (dr8 OR xtb OR uul OR 9mt)]: %NAME%%NL%%DARK_GREEN%Aldurs
+ItemDisplay[SET !ID (xar OR urn OR 7ws OR paf)]: %NAME%%NL%%DARK_GREEN%Griswold
+ItemDisplay[SET !ID (ba5 OR 7m7 OR uar OR zhb OR xhg OR xhb)]: %NAME%%NL%%DARK_GREEN%Immortal King
+ItemDisplay[SET !ID (ci1 OR amc OR uld OR xtg OR zvb)]: %NAME%%NL%%DARK_GREEN%M'avina
+ItemDisplay[SET !ID (xh9 OR ucl OR xmb OR 7qr)]: %NAME%%NL%%DARK_GREEN%Natalya
+ItemDisplay[SET !ID (oba OR xsk OR uth OR zmb)]: %NAME%%NL%%DARK_GREEN%Tal Rasha
+ItemDisplay[SET !ID (uh9 OR xul OR ne9 OR utc OR xmg)]: %NAME%%NL%%DARK_GREEN%Trang-oul
+
+
+ItemDisplay[SET !ID (9vo OR xcl OR xrn OR mbl)]: %NAME%%NL%%DARK_GREEN%Hwanin
+ItemDisplay[SET !ID (6cs OR ult OR ci0)]: %NAME%%NL%%DARK_GREEN%Naj
+ItemDisplay[SET !ID (7ls OR upl OR xhl)]: %NAME%%NL%%DARK_GREEN%Sazabi
+
+
+
 
 // ------------------------------
 // [QUES]    Quest Items	   //
