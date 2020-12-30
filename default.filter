@@ -314,6 +314,8 @@ ItemDisplay[dcso]: %PURPLE%+++ %RED%%NAME% %PURPLE%+++{%PURPLE%Used to spawn dia
 // ---------------------------
 // [CORR] Corruption Items
 // ---------------------------
+ItemDisplay[wss QTY>1]: %NAME% %WHITE%[%PURPLE%%QTY%%WHITE%]%CONTINUE%
+ItemDisplay[lbox QTY>1]: %NAME% %WHITE%[%RED%%QTY%%WHITE%]%CONTINUE%
 ItemDisplay[wss]: %PURPLE%++ %NAME% %PURPLE%++{%TAN%If item has or cant have sockets, 1/2 brick%NL%1/4 to roll sockets%NL%1/4 to brick%NL%1/2 to roll modifier}%MAP-9B%%PX-62% // Worldstone Shard
 ItemDisplay[lbox]: %PURPLE%++%RED%+ %NAME% %RED%+%PURPLE%++%MAP-62% // Larzuk's Box
 
