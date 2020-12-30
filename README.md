@@ -9,6 +9,7 @@
 
 ![Checkboxes in settings](/images/checkboxes.png)
 ## Additional informations
+- If items happen to have bugged out names with weird characters, the issue is most probably that your default.filter is using the wrong text encoding (You need ANSI but the default often is UTF-8). If you have this issue, i recommend doing going to the "raw file" from github using my download link and then using `ctrl+s` to save the whole file, replace the existing `default.filter`. Everyone that messaged me with this issue had used the copy-paste function to paste the text in the file.
 - If you find any issues with the filter, you are welcome to either message me on discord at **ElPocoBurrito#5641** or to create a pull request on github which i will merge as soon as i have free time.
 
 ## Credits
