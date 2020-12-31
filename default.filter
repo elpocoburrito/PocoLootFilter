@@ -565,7 +565,7 @@ ItemDisplay[NMAG !INF !RW amc SOCK=0 ED>9]: %NAME%
 
 //Armors - Hell
 ItemDisplay[NMAG !INF !RW (uui OR uea OR ula OR utu OR urs OR utp) (SOCK=2 OR SOCK=3 OR SOCK=4)]: %NAME%
-ItemDisplay[NMAG !INF !RW (uld OR utp) (ED>9 OR ETH) SOCK=0]: %NAME%
+ItemDisplay[NMAG !INF !RW (uld OR utp) (ED>9 OR ETH) !SOCK=1]: %NAME%
 
 //Helms - Hell
 ItemDisplay[NMAG !INF !RW CLVL<85 (uap OR ukp OR usk OR uh9) (SOCK=2 OR SOCK=3)]: %NAME%
