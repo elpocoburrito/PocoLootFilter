@@ -107,9 +107,9 @@ ItemDisplay[GEM>3 QTY>1]: %NAME% %GOLD%x%RED%%QTY%
 
 
 //Display prettier runes with rune number in name
-ItemDisplay[RUNE<14]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%																//el-shael
-ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%											//dol-fal
-ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¥%BORDER-00%%MAP-62%%NOTIFY-1%								//lem, pul, um
+ItemDisplay[RUNE<14 RUNE>0]: %GOLD%[%LIGHT_GRAY%%RUNENUM%%GOLD%] %RUNENAME%%BORDER-00%%MAP-1D%%NOTIFY-F%	//el-shael
+ItemDisplay[RUNE>13 RUNE<20]: %RED%¤ %ORANGE%[%WHITE%%RUNENUM%%ORANGE%] %RUNENAME% %RED%¤%BORDER-00%%MAP-60%%NOTIFY-8%	    //dol-fal
+ItemDisplay[RUNE>19 RUNE<23]: %PURPLE%¥%RED%¤ %RED%[%WHITE%%RUNENUM%%RED%] %RUNENAME% %RED%¤%PURPLE%¥%BORDER-00%%MAP-62%%NOTIFY-1%	//lem, pul, um
 ItemDisplay[RUNE>22]: %WHITE%[%DARK_GREEN%Holy shit%WHITE%]%NL%%PURPLE%ØØ %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %ORANGE%%RUNENAME% %PURPLE%[%WHITE%%RUNENUM%%PURPLE%] %PURPLE%ØØ%NL%%WHITE%[%DARK_GREEN%Holy shit%WHITE%]%BORDER-9B%%MAP-60%%NOTIFY-B%		//mal-zod																										// Shows the quantity of runes in a stack
 
 
@@ -207,8 +207,6 @@ ItemDisplay[SET !ID (uh9 OR xul OR ne9 OR utc OR xmg)]: %NAME%%NL%%DARK_GREEN%Tr
 ItemDisplay[SET !ID (9vo OR xcl OR xrn OR mbl)]: %NAME%%NL%%DARK_GREEN%Hwanin
 ItemDisplay[SET !ID (6cs OR ult OR ci0)]: %NAME%%NL%%DARK_GREEN%Naj
 ItemDisplay[SET !ID (7ls OR upl OR xhl)]: %NAME%%NL%%DARK_GREEN%Sazabi
-
-
 
 
 // ------------------------------
@@ -455,7 +453,7 @@ ItemDisplay[NMAG !INF !RW bsd (SOCK=4 OR SOCK=5)]: %NAME%
 ItemDisplay[NMAG !INF !RW bsd SOCK=0 ILVL>25]: %NAME%
 
 //1H Axes - Norm
-ItemDisplay[NMAG !INF !RW CLVL<5+5 wax (SOCK=2 OR SOCK=3 OR SOCK=4)]: %NAME%
+ItemDisplay[NMAG !INF !RW CLVL<35 wax (SOCK=2 OR SOCK=3 OR SOCK=4)]: %NAME%
 
 //Shields - Norm
 ItemDisplay[NMAG !INF !RW CLVL<40 (((lrg OR kit) SOCK=3) OR ((spk OR bsh) SOCK=2))]: %NAME%
@@ -494,7 +492,7 @@ ItemDisplay[NMAG !INF !RW CLVL<80 SIN NORM !SOCK=1 !SOCK=2 !ETH]: %NAME%
 //Exceptional bases
 //-----------------
 //Polearms - NM
-ItemDisplay[NMAG !INF !RW (9s8 OR 9vo OR 9pa OR 9br OR 9tr) ((SOCK=4 OR SOCK=5) OR (SOCK=0 (ED>9 OR ETH))]: %NAME%
+ItemDisplay[NMAG !INF !RW (9s8 OR 9vo OR 9pa OR 9br OR 9tr) ((SOCK=4 OR SOCK=5) OR (SOCK=0 (ED>9 OR ETH)))]: %NAME%
 
 //1H Axes - NM
 ItemDisplay[NMAG !INF !RW CLVL<85 9wa (SOCK=2 OR SOCK=3 OR SOCK=4)]: %NAME%
@@ -567,7 +565,7 @@ ItemDisplay[NMAG !INF !RW amc SOCK=0 ED>9]: %NAME%
 
 //Armors - Hell
 ItemDisplay[NMAG !INF !RW (uui OR uea OR ula OR utu OR urs OR utp) (SOCK=2 OR SOCK=3 OR SOCK=4)]: %NAME%
-ItemDisplay[NMAG !INF !RW (urd OR utp) (ED>9 OR ETH) SOCK=0]: %NAME%
+ItemDisplay[NMAG !INF !RW (uld OR utp) (ED>9 OR ETH) SOCK=0]: %NAME%
 
 //Helms - Hell
 ItemDisplay[NMAG !INF !RW CLVL<85 (uap OR ukp OR usk OR uh9) (SOCK=2 OR SOCK=3)]: %NAME%
@@ -585,7 +583,7 @@ ItemDisplay[NMAG !INF !RW NEC ELT !SOCK=1 !ETH]: %NAME%
 ItemDisplay[NMAG !INF !RW CLVL<80 SIN ELT !SOCK=1 !SOCK=2 !ETH]: %NAME%
 
 //Zon Bows - Hell
-ItemDisplay[NMAG !INF |RW ZON ELT !SOCK=1]: %NAME%
+ItemDisplay[NMAG !INF RW ZON ELT !SOCK=1]: %NAME%
 
 
 //------------------------------------------------------------------
