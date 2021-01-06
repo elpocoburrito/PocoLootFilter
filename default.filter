@@ -102,7 +102,7 @@ ItemDisplay[GEMTYPE=5]: %NAME%%ORANGE%Sapphire%CONTINUE% //Sapphires
 ItemDisplay[GEMTYPE=6]: %NAME%%ORANGE%Topaz%CONTINUE% //Topazes
 ItemDisplay[GEMTYPE=7]: %NAME%%ORANGE%Skull%CONTINUE% //Skulls
 //Append quantity after stacks
-ItemDisplay[RUNE>0 QTY>1]: %NAME% %GOLD%x%RED%%QTY%
+ItemDisplay[RUNE>0 QTY>1]: %TAN%[%WHITE%%RUNENUM%%TAN%] %NAME% %GOLD%x%RED%%QTY%
 ItemDisplay[GEM>3 QTY>1]: %NAME% %GOLD%x%RED%%QTY%
 
 
