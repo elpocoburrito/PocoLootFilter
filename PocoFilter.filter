@@ -172,7 +172,7 @@ ItemDisplay[ibk QTY<10]: %RED%Tome of ID // Tome of Identify
 ItemDisplay[ibk]: %WHITE%Tome of ID // Tome of Identify
 ItemDisplay[tbk QTY<40]: %YELLOW%Tome of Portal// Tome of Town Portal
 ItemDisplay[tbk QTY<10]: %RED%Tome of Portal // Tome of Town Portal
-ItemDisplay[tbk]:  %WHITE%Tome of Portal// Tome of Town Portal
+ItemDisplay[tbk]: %WHITE%Tome of Portal// Tome of Town Portal
 
 // ------------------------------------------------------------------------------
 // [IBOT] Other Items
