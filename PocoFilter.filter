@@ -85,7 +85,7 @@ ItemDisplay[DIN NMAG RES>30]: %NAME% %RED%@res%WHITE%(%GRAY%30++%WHITE%)%DOT-1D%
 
 
 ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%%ILVL%%WHITE%]%CONTINUE%
-ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3 OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%Ã˜Ã˜Ã˜%GOLD%-- %NAME% %GOLD%--%RED%Ã˜Ã˜Ã˜
+ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3 OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%ØØØ%GOLD%-- %NAME% %GOLD%--%RED%ØØØ
 
 // ------------------------------------------------------------------------------
 // [IBAD] Eth/Sockets/Item Level
@@ -147,8 +147,8 @@ ItemDisplay[rvl]: %PURPLE%R%WHITE%2
 
 // Drinkable Potions
 ItemDisplay[vps]: // Hide Stamina Potions
-ItemDisplay[yps]: %DARK_GREEN%Ã˜%GRAY%A
-ItemDisplay[wms]: %BLUE%Ã˜%GRAY%T
+ItemDisplay[yps]: %DARK_GREEN%Ø%GRAY%A
+ItemDisplay[wms]: %BLUE%Ø%GRAY%T
 
 // Throwing Potions
 ItemDisplay[gpl]: // Hide Strangling Potions
@@ -167,12 +167,13 @@ ItemDisplay[isc DIFF>0]: // Hides Scroll of Identify after Normal difficulty
 ItemDisplay[tsc DIFF<1 CLVL<15]: %BLUE%O%WHITE% TP{%TAN%will slowly show less clutter!%NL%Keep lvling and the filter%NL%All Exc and Elt Magics/Bases until 75%NL%All Magics/Bases until 30} // Scroll of Town Portal, showing info about filter until char level 15
 ItemDisplay[tsc DIFF<1]: %BLUE%O%WHITE% TP // Scroll of Town Portal
 ItemDisplay[tsc DIFF>0]: // Hides Scroll of Town Portal after Normal difficulty
-ItemDisplay[ibk QTY<40]: %YELLOW%Tome of ID // Tome of Identify
+ItemDisplay[ibk QTY>39]: %WHITE%Tome of ID // Tome of Identify
+ItemDisplay[ibk QTY>9 QTY<40]: %YELLOW%Tome of ID // Tome of Identify
 ItemDisplay[ibk QTY<10]: %RED%Tome of ID // Tome of Identify
-ItemDisplay[ibk]: %WHITE%Tome of ID // Tome of Identify
-ItemDisplay[tbk QTY<40]: %YELLOW%Tome of Portal// Tome of Town Portal
+ItemDisplay[tbk QTY>39]:  %WHITE%Tome of Portal// Tome of Town Portal
+ItemDisplay[tbk QTY>9 QTY<40]: %YELLOW%Tome of Portal// Tome of Town Portal
 ItemDisplay[tbk QTY<10]: %RED%Tome of Portal // Tome of Town Portal
-ItemDisplay[tbk]: %WHITE%Tome of Portal// Tome of Town Portal
+
 
 // ------------------------------------------------------------------------------
 // [IBOT] Other Items
@@ -1848,8 +1849,8 @@ ItemDisplay[NMAG !INF !RW SOCK=0 ILVL>40 7gi]: %NAME%{%TAN%Larzuk quest for 6 so
 
 // Bows
 ItemDisplay[NMAG !INF !RW SOCK=0 sbw]: %NAME%{%TAN%Larzuk quest for 3 sockets}%CONTINUE% // All Short Bow, 0os
-ItemDisplay[NMAG !INF !RW SOCK=0 ILVL<26 hbw]: %NAME%{%TAN%Larzuk quest for 3 sockets}%CONTINUE% // All Hunterâ€™s Bow, 0os, ilvl 1-25
-ItemDisplay[NMAG !INF !RW SOCK=0 ILVL>25 hbw]: %NAME%{%TAN%Larzuk quest for 4 sockets}%CONTINUE% // All Hunterâ€™s Bow, 0os, ilvl 26+
+ItemDisplay[NMAG !INF !RW SOCK=0 ILVL<26 hbw]: %NAME%{%TAN%Larzuk quest for 3 sockets}%CONTINUE% // All Hunter’s Bow, 0os, ilvl 1-25
+ItemDisplay[NMAG !INF !RW SOCK=0 ILVL>25 hbw]: %NAME%{%TAN%Larzuk quest for 4 sockets}%CONTINUE% // All Hunter’s Bow, 0os, ilvl 26+
 ItemDisplay[NMAG !INF !RW SOCK=0 ILVL<26 lbw]: %NAME%{%TAN%Larzuk quest for 3 sockets}%CONTINUE% // All Long Bow, 0os, ilvl 1-25
 ItemDisplay[NMAG !INF !RW SOCK=0 ILVL<41 ILVL>25 lbw]: %NAME%{%TAN%Larzuk quest for 4 sockets}%CONTINUE% // All Long Bow, 0os, ilvl 26-40
 ItemDisplay[NMAG !INF !RW SOCK=0 ILVL>40 lbw]: %NAME%{%TAN%Larzuk quest for 5 sockets}%CONTINUE% // All Long Bow, 0os, ilvl 41+
