@@ -2852,6 +2852,9 @@ ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=5 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} //
 ItemDisplay[NMAG !INF !RW ETH SOCK=0 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 0os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 4os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=5 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 5os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 0os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 4os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=5 7s8]: %NAME%%DOT-20%%PX-00%{%NAME%} // Thresher, 5os, Eth
 
 // Cryptic Axe
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 0os, Superior, Non-Eth
@@ -2860,9 +2863,9 @@ ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=5 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} //
 ItemDisplay[NMAG !INF !RW ETH SOCK=0 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 0os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 4os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=5 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 5os, Eth
-ItemDisplay[NMAG !INF !RW SUP ETH SOCK=0 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 0os, Superior, Eth
-ItemDisplay[NMAG !INF !RW SUP ETH SOCK=4 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 4os, Superior, Eth
-ItemDisplay[NMAG !INF !RW SUP ETH SOCK=5 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 5os, Superior, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 0os, Superior, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 4os, Superior, Eth
+ItemDisplay[NMAG !INF !RW SOCK=5 7pa]: %NAME%%DOT-20%%PX-00%{%NAME%} // Cryptic Axe, 5os, Superior, Eth
 
 // Great Poleaxe
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 0os, Superior, Non-Eth
@@ -2872,6 +2875,9 @@ ItemDisplay[NMAG !INF !RW ETH SOCK=0 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Grea
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 4os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=5 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 5os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=6 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 6os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 0os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 4os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=5 7h7]: %NAME%%DOT-20%%PX-00%{%NAME%} // Great Poleaxe, 5os, Eth
 
 // Giant Thresher
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7wc]: %NAME%%DOT-20%%PX-00%{%NAME%} // Giant Thresher, 0os, Superior, Non-Eth
@@ -2894,7 +2900,7 @@ ItemDisplay[NMAG !INF !RW SOCK=5 SCEPTER]: %NAME%{%ORANGE%Eternity, Honor%NL%Bea
 
 ItemDisplay[NMAG !INF !RW SOCK>1 CLVL<30 SCEPTER]: %NAME%%DOT-20%%PX-00%{%NAME%} // Shows and notify all 2+ socket Scepters until character level 30
 
-ItemDisplay[NMAG !INF !RW !ETH SOCK=4 SCEPTER]: %NAME%%DOT-1E%{%NAME%} // All Scepters, 4os
+ItemDisplay[NMAG !INF !RW SOCK=4 SCEPTER]: %NAME%%DOT-1E%{%NAME%} // All Scepters, 4os
 ItemDisplay[NMAG !INF !RW !ETH SOCK=5 wsp SCEPTER]: %NAME%%DOT-1E%{%NAME%} // All War Scepters, 5os
 
 // Defensive Auras
@@ -2929,6 +2935,8 @@ ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7tr]: %NAME%%DOT-20%%PX-00%{%NAME%} //
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=4 7tr]: %NAME%%DOT-20%%PX-00%{%NAME%} // Stygian Pike, 4os, Superior, Non-Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=0 7tr]: %NAME%%DOT-20%%PX-00%{%NAME%} // Stygian Pike, 0os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7tr]: %NAME%%DOT-20%%PX-00%{%NAME%} // Stygian Pike, 4os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7tr]: %NAME%{%NAME%} // Stygian Pike, 0os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7tr]: %NAME%{%NAME%} // Stygian Pike, 4os, Eth
 
 // Mancatcher
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7br]: %NAME%%DOT-20%%PX-00%{%NAME%} // Mancatcher, 0os, Superior, Non-Eth
@@ -2945,6 +2953,9 @@ ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=5 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} //
 ItemDisplay[NMAG !INF !RW ETH SOCK=0 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 0os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 4os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=5 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 5os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 0os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 4os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=5 7st]: %NAME%%DOT-20%%PX-00%{%NAME%} // Ghost Spear, 5os, Eth
 
 // War Pike
 ItemDisplay[NMAG !INF !RW SUP !ETH SOCK=0 7p7]: %NAME%%DOT-20%%PX-00%{%NAME%} // War Pike, 0os, Superior, Non-Eth
@@ -2954,6 +2965,10 @@ ItemDisplay[NMAG !INF !RW ETH SOCK=0 7p7]: %NAME%%DOT-20%%PX-00%{%NAME%} // War 
 ItemDisplay[NMAG !INF !RW ETH SOCK=4 7p7]: %NAME%%DOT-20%%PX-00%{%NAME%} // War Pike, 4os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=5 7p7]: %NAME%%DOT-20%%PX-00%{%NAME%} // War Pike, 5os, Eth
 ItemDisplay[NMAG !INF !RW ETH SOCK=6 7p7]: %NAME%%DOT-20%%PX-00%{%NAME%} // War Pike, 6os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=0 7p7]: %NAME%{%NAME%} // War Pike, 0os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=4 7p7]: %NAME%{%NAME%} // War Pike, 4os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=5 7p7]: %NAME%{%NAME%} // War Pike, 5os, Eth
+ItemDisplay[NMAG !INF !RW SOCK=6 7p7]: %NAME%{%NAME%} // War Pike, 6os, Eth
 
 // ------------------------------------------------------------------------------
 //    [BWST] Staves
