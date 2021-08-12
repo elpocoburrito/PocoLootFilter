@@ -83,9 +83,38 @@ ItemDisplay[DIN NMAG RES=30]: %NAME% %RED%@res%WHITE%(%GRAY%30%WHITE%)%DOT-1D%
 ItemDisplay[DIN NMAG RES>30]: %NAME% %RED%@res%WHITE%(%GRAY%30++%WHITE%)%DOT-1D%
 
 
-
 ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%%ILVL%%WHITE%]%CONTINUE%
-ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3 OR uap OR usk OR urn OR xea OR uld OR ult OR uul OR uar OR uhn OR uit OR ush OR xsh OR uvg OR umg OR utg OR uhg OR ulb OR uvb OR utb OR uhb OR xhb OR xtb OR ulc OR uvc OR umc OR zhb OR zmb OR ci1 OR ci3 OR pa9 OR pae OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии
+
+
+
+
+
+// ------------------------------------------------------------------
+// -																-
+// -				Good uniques - work in progress					-
+// -																-
+// ------------------------------------------------------------------
+ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//jewelery
+ItemDisplay[UNI !ID (skp)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm helms
+ItemDisplay[UNI !ID (xlm OR xh9 OR xhm OR xrn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc helms
+ItemDisplay[UNI !ID (uap OR ulm OR uhl OR usk OR uh9 OR uhm OR urn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite helms
+ItemDisplay[UNI !ID (xui OR xea OR xrs OR xhn OR xpl OR xtp OR xld OR xlt OR xth OR xul OR xar)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии	//exc armors
+ItemDisplay[UNI !ID (uui OR utu OR uld OR uul OR upl OR uar OR uth)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite armors
+ItemDisplay[UNI !ID (hbl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm belts
+ItemDisplay[UNI !ID (zlb OR zvb OR ztb OR zhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc belts
+ItemDisplay[UNI !ID (ulc OR uvc OR umc)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite belts
+ItemDisplay[UNI !ID (xvb OR xmb OR xtb OR xhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc boots
+ItemDisplay[UNI !ID (uvb OR umb OR utb OR uhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//elite boots
+ItemDisplay[UNI !ID (mgl OR  tgl OR  hgl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии														//norm gloves
+ItemDisplay[UNI !ID (xmg OR xtg OR xhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//exc gloves
+ItemDisplay[UNI !ID (uvg OR umg OR uhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite gloves
+ItemDisplay[UNI !ID (xrg OR xpk OR xit OR xsh OR xow OR xts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//exc shields
+ItemDisplay[UNI !ID (uml OR uit OR ush OR uow OR uts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии											//elite shields
+ItemDisplay[UNI !ID (nea OR nee OR nef OR ne6)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//nec shields
+ItemDisplay[UNI !ID (pa9 OR pac OR pae)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//pally shields
+ItemDisplay[UNI !ID (ci1 OR ci3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																	//circlets
+ItemDisplay[UNI !ID (ult OR uhn OR utg OR ulb OR zmb OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии			//others
+
 
 // ------------------------------------------------------------------------------
 // [IBAD] Eth/Sockets/Item Level
