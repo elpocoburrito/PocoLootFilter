@@ -18,22 +18,13 @@
 // |     [BASIC] Basic rules                                                            |
 // |                                                                            |
 // +----------------------------------------------------------------------------+
-//Notify for set, uniques and runewords drops
-ItemDisplay[SET]: %NAME%%MAP-83%%CONTINUE%
-ItemDisplay[UNI]: %NAME%%MAP-53%%CONTINUE%
-ItemDisplay[RW]: %NAME%%MAP-1F%%CONTINUE%
 
-ItemDisplay[SET NORM WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
-ItemDisplay[UNI NORM WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
-
-ItemDisplay[SET EXC WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
-ItemDisplay[UNI EXC WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
-
-ItemDisplay[SET NORM ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
-ItemDisplay[UNI NORM ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
-
-ItemDisplay[SET EXC ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
-ItemDisplay[UNI EXC ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+// ------------------------------------------------------------------------------
+// [IBAD] Eth/Sockets/Item Level
+// ------------------------------------------------------------------------------
+//Append sockets and [eth] to socketed/eth items
+ItemDisplay[ETH]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
+ItemDisplay[SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
 
 //Append Enhanced defense/damage to all white/gray items
 ItemDisplay[NMAG ED=1]: %NAME% %BLUE%ED%WHITE%-%RED%1%CONTINUE%
@@ -51,6 +42,56 @@ ItemDisplay[NMAG ED=12]: %NAME% %BLUE%ED%WHITE%-%RED%12%CONTINUE%
 ItemDisplay[NMAG ED=13]: %NAME% %BLUE%ED%WHITE%-%RED%13%CONTINUE%
 ItemDisplay[NMAG ED=14]: %NAME% %BLUE%ED%WHITE%-%RED%14%CONTINUE%
 ItemDisplay[NMAG ED=15]: %NAME% %BLUE%ED%WHITE%-%RED%15%CONTINUE%
+
+//Notify for set, uniques and runewords drops
+ItemDisplay[SET]: %NAME%%MAP-83%%CONTINUE%
+ItemDisplay[UNI]: %NAME%%MAP-53%%CONTINUE%
+ItemDisplay[RW]: %NAME%%MAP-1F%%CONTINUE%
+
+ItemDisplay[SET NORM WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+ItemDisplay[UNI NORM WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Ral %WHITE%+ %ORANGE%Sol %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+
+ItemDisplay[SET EXC WEAPON]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+ItemDisplay[UNI EXC WEAPON]: {%GOLD%This %WHITE%+ %ORANGE%Lum %WHITE%+ %ORANGE%Pul %WHITE%+ %GREEN%PEmerald}%NAME%%CONTINUE%
+
+ItemDisplay[SET NORM ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+ItemDisplay[UNI NORM ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Tal %WHITE%+ %ORANGE%Shael %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+
+ItemDisplay[SET EXC ARMOR]: {%DARK_GREEN%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+ItemDisplay[UNI EXC ARMOR]: {%GOLD%This %WHITE%+ %ORANGE%Ko %WHITE%+ %ORANGE%Lem %WHITE%+ %WHITE%PDiamond}%NAME%%CONTINUE%
+
+// Upgrade recipes for Unique items
+ItemDisplay[UNI ID NORM ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Diamond%NL%Cube w/ Tal Rune, Shael%NL%%ORANGE%Upgrade Recipe:}
+ItemDisplay[UNI ID EXC ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Diamond%NL%Cube w/ Ko Rune, Lem%NL%%ORANGE%Upgrade Recipe:}
+ItemDisplay[UNI ID NORM WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Emerald%NL%Cube w/ Ral Rune, Sol%NL%%ORANGE%Upgrade Recipe:}
+ItemDisplay[UNI ID EXC WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Emerald%NL%Cube w/ Lum Rune, Pul%NL%%ORANGE%Upgrade Recipe:}
+
+
+// ------------------------------------------------------------------
+// -																-
+// -				Good uniques - work in progress					-
+// -																-
+// ------------------------------------------------------------------
+ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//jewelery
+ItemDisplay[UNI !ID (skp)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm helms
+ItemDisplay[UNI !ID (xlm OR xh9 OR xhm OR xrn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc helms
+ItemDisplay[UNI !ID (uap OR ulm OR uhl OR usk OR uh9 OR uhm OR urn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite helms
+ItemDisplay[UNI !ID (xui OR xea OR xrs OR xhn OR xpl OR xtp OR xld OR xlt OR xth OR xul OR xar)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии	//exc armors
+ItemDisplay[UNI !ID (uui OR utu OR uld OR uul OR upl OR uar OR uth)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite armors
+ItemDisplay[UNI !ID (hbl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm belts
+ItemDisplay[UNI !ID (zlb OR zvb OR ztb OR zhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc belts
+ItemDisplay[UNI !ID (ulc OR uvc OR umc OR utc)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite belts
+ItemDisplay[UNI !ID (xvb OR xmb OR xtb OR xhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc boots
+ItemDisplay[UNI !ID (uvb OR umb OR utb OR uhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//elite boots
+ItemDisplay[UNI !ID (mgl OR  tgl OR  hgl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии														//norm gloves
+ItemDisplay[UNI !ID (xmg OR xtg OR xhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//exc gloves
+ItemDisplay[UNI !ID (uvg OR umg OR uhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite gloves
+ItemDisplay[UNI !ID (xrg OR xpk OR xit OR xsh OR xow OR xts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//exc shields
+ItemDisplay[UNI !ID (uml OR uit OR ush OR uow OR uts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии											//elite shields
+ItemDisplay[UNI !ID (nea OR nee OR nef OR ne6)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//nec shields
+ItemDisplay[UNI !ID (pa9 OR pac OR pae)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//pally shields
+ItemDisplay[UNI !ID (ci1 OR ci3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																	//circlets
+ItemDisplay[UNI !ID (ult OR uhn OR utg OR ulb OR zmb OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии			//others
 
 
 //append @res to paladin shields
@@ -85,46 +126,6 @@ ItemDisplay[DIN NMAG RES>30]: %NAME% %RED%@res%WHITE%(%GRAY%30++%WHITE%)%DOT-1D%
 
 ItemDisplay[MAG (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %NAME% %WHITE%[%BLUE%%ILVL%%WHITE%]%CONTINUE%
 
-
-
-
-
-// ------------------------------------------------------------------
-// -																-
-// -				Good uniques - work in progress					-
-// -																-
-// ------------------------------------------------------------------
-ItemDisplay[UNI !ID (rin OR amu OR jew OR cm1 OR cm2 OR cm3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//jewelery
-ItemDisplay[UNI !ID (skp)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm helms
-ItemDisplay[UNI !ID (xlm OR xh9 OR xhm OR xrn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc helms
-ItemDisplay[UNI !ID (uap OR ulm OR uhl OR usk OR uh9 OR uhm OR urn)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite helms
-ItemDisplay[UNI !ID (xui OR xea OR xrs OR xhn OR xpl OR xtp OR xld OR xlt OR xth OR xul OR xar)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии	//exc armors
-ItemDisplay[UNI !ID (uui OR utu OR uld OR uul OR upl OR uar OR uth)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии								//elite armors
-ItemDisplay[UNI !ID (hbl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																		//norm belts
-ItemDisplay[UNI !ID (zlb OR zvb OR ztb OR zhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc belts
-ItemDisplay[UNI !ID (ulc OR uvc OR umc OR utc)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite belts
-ItemDisplay[UNI !ID (xvb OR xmb OR xtb OR xhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//exc boots
-ItemDisplay[UNI !ID (uvb OR umb OR utb OR uhb)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//elite boots
-ItemDisplay[UNI !ID (mgl OR  tgl OR  hgl)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии														//norm gloves
-ItemDisplay[UNI !ID (xmg OR xtg OR xhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//exc gloves
-ItemDisplay[UNI !ID (uvg OR umg OR uhg)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//elite gloves
-ItemDisplay[UNI !ID (xrg OR xpk OR xit OR xsh OR xow OR xts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии										//exc shields
-ItemDisplay[UNI !ID (uml OR uit OR ush OR uow OR uts)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии											//elite shields
-ItemDisplay[UNI !ID (nea OR nee OR nef OR ne6)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии													//nec shields
-ItemDisplay[UNI !ID (pa9 OR pac OR pae)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии															//pally shields
-ItemDisplay[UNI !ID (ci1 OR ci3)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии																	//circlets
-ItemDisplay[UNI !ID (ult OR uhn OR utg OR ulb OR zmb OR 7cs OR obf OR obc OR oba OR 7cr)]: %RED%иии%GOLD%-- %NAME% %GOLD%--%RED%иии			//others
-
-
-// ------------------------------------------------------------------------------
-// [IBAD] Eth/Sockets/Item Level
-// ------------------------------------------------------------------------------
-//Append sockets and [eth] to socketed/eth items
-ItemDisplay[ETH SOCK=0]: %NAME% %WHITE%[%GRAY%ETH%WHITE%]%CONTINUE%
-ItemDisplay[!ETH SOCK=0]: %NAME%%CONTINUE%
-ItemDisplay[ETH SOCK>0]: %NAME% %WHITE%[%GRAY%ETH%WHITE%][%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
-ItemDisplay[!ETH SOCK>0]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]%CONTINUE%
-
 // ------------------------------------------------------------------------------
 // [BICO] Consumables
 // ------------------------------------------------------------------------------
@@ -143,7 +144,7 @@ ItemDisplay[CLVL>89 GOLD<3500]:
 // ------------------------------------------------------------------------------
 //    [BCKE] Keys
 // ------------------------------------------------------------------------------
-ItemDisplay[key DIFF>0]: //%NAME% // Remove // before %NAME% to show keys again - useful for Lower Kurast Runs
+ItemDisplay[key DIFF>0]: //%NAME% // Remove // before %NAME% to show keys again
 
 // ------------------------------------------------------------------------------
 //    [BCPO] Potions
@@ -151,13 +152,13 @@ ItemDisplay[key DIFF>0]: //%NAME% // Remove // before %NAME% to show keys again 
 // Health Potions
 ItemDisplay[hp1 DIFF>0]: // Hides Minor Healing Potions after Normal difficulty
 ItemDisplay[hp2 DIFF>0]: // Hides Light Healing Potions after Normal difficulty
-ItemDisplay[hp3 DIFF>1]: // Hides Healing Potions after after Normal difficulty
+ItemDisplay[hp3 DIFF>1]: // Hides Healing Potions after after Nightmare difficulty
 ItemDisplay[hp4 DIFF>1]: // Hides Greater Healing Potion after Nightmare difficulty
 
 // Mana Potions
 ItemDisplay[mp1 DIFF>0]: // Hides Minor Mana Potions after Normal difficulty
 ItemDisplay[mp2 DIFF>0]: // Hides Light Mana Potions after Normal difficulty
-ItemDisplay[mp3 DIFF>1]: // Hides Mana Potions after after Normal difficulty
+ItemDisplay[mp3 DIFF>1]: // Hides Mana Potions after after Nightmare difficulty
 ItemDisplay[mp4 DIFF>1]: // Hides Greater Mana Potion after Nightmare difficulty
 
 //Shorten Potion names
@@ -190,19 +191,13 @@ ItemDisplay[ops]: // Hide Oil Potions
 // ------------------------------------------------------------------------------
 //    [BCTO] Scrolls & Tomes
 // ------------------------------------------------------------------------------
-ItemDisplay[isc DIFF<1 CLVL<15]: %RED%O%WHITE% ID{%TAN%Continued on TP scroll...%NL%All Exc and Elt Rares until 75%NL%All Rares until character level 40%NL%My filters show:} // Scroll of Identify, showing info about filter until char level 15
-ItemDisplay[isc DIFF<1]: %RED%O%WHITE% ID // Scroll of Identify
-ItemDisplay[isc DIFF>0]: // Hides Scroll of Identify after Normal difficulty
-ItemDisplay[tsc DIFF<1 CLVL<15]: %BLUE%O%WHITE% TP{%TAN%will slowly show less clutter!%NL%Keep lvling and the filter%NL%All Exc and Elt Magics/Bases until 75%NL%All Magics/Bases until 30} // Scroll of Town Portal, showing info about filter until char level 15
-ItemDisplay[tsc DIFF<1]: %BLUE%O%WHITE% TP // Scroll of Town Portal
-ItemDisplay[tsc DIFF>0]: // Hides Scroll of Town Portal after Normal difficulty
-ItemDisplay[ibk QTY>39]: %WHITE%Tome of ID // Tome of Identify
-ItemDisplay[ibk QTY>9 QTY<40]: %YELLOW%Tome of ID // Tome of Identify
-ItemDisplay[ibk QTY<10]: %RED%Tome of ID // Tome of Identify
-ItemDisplay[tbk QTY>39]:  %WHITE%Tome of Portal// Tome of Town Portal
-ItemDisplay[tbk QTY>9 QTY<40]: %YELLOW%Tome of Portal// Tome of Town Portal
-ItemDisplay[tbk QTY<10]: %RED%Tome of Portal // Tome of Town Portal
+ItemDisplay[isc]: %RED%O%WHITE% ID%CONTINUE% // Scroll of Identify, showing info about filter until char level 15
+ItemDisplay[tsc]: %BLUE%O%WHITE% TP%CONTINUE% // Hides Scroll of Town Portal after Normal difficulty
+ItemDisplay[ibk]: %RED%Tome%WHITE% of ID // Tome of Identify
+ItemDisplay[tbk]: %BLUE%Tome%WHITE% of Portal // Tome of Town Portal
 
+ItemDisplay[isc CLVL>19]: // Scroll of Identify, showing info about filter until char level 15
+ItemDisplay[tsc CLVL>19]: // Hides Scroll of Town Portal after Normal difficulty
 
 // ------------------------------------------------------------------------------
 // [IBOT] Other Items
@@ -212,12 +207,14 @@ ItemDisplay[!RW INF ID (ARMOR OR WEAPON) CLVL>10]: // Hide all Low Quality, Crac
 
 // Arrows & Quivers
 ItemDisplay[(aqv OR cqv) NMAG CLVL>5]: // Hides Arrow quivers past character level 5
-ItemDisplay[MAG aqv CLVL<50]: %NAME%%CONTINUE% // Shows Magic Arrow quivers until character level 50
-ItemDisplay[MAG cqv CLVL<50]: %NAME%%CONTINUE% // Shows Magic Bolt quivers until character level 50
-ItemDisplay[RARE cqv]: %NAME%%CONTINUE% // Shows Magic Bolt quivers until character level 50
-//ItemDisplay[(aqv OR cqv) MAG]: %NAME%%MAP-93%%CONTINUE% // Uncomment to show magic arrows
-//ItemDisplay[(aqv OR cqv) RARE]: %NAME%%MAP-A8%%CONTINUE% // Uncomment to show rare arrows
-ItemDisplay[(aqv OR cqv) (UNI OR SET)]: %NAME%%CONTINUE% // Hides Arrow quivers past character level 5
+ItemDisplay[MAG aqv]: %NAME%%CONTINUE% // Shows Magic Arrow quivers until character level 50
+ItemDisplay[MAG cqv]: %NAME%%CONTINUE% // Shows Magic Bolt quivers until character level 50
+ItemDisplay[MAG aqv CLVL>49]: 
+ItemDisplay[MAG cqv CLVL>49]:
+
+ItemDisplay[RARE (aqv OR cqv)]: %NAME% // Shows Magic Bolt quivers until character level 50
+
+ItemDisplay[(aqv OR cqv) (UNI OR SET)]: %NAME%
 
 
 // +----------------------------------------------------------------------------+
@@ -490,9 +487,9 @@ ItemDisplay[t47]: %PURPLE%+ %NAME% %PURPLE%[T4]%MAP-9B%%CONTINUE%{%TAN%Right-cli
 ItemDisplay[t48]: %PURPLE%+ %NAME% %PURPLE%[T4]%MAP-9B%%CONTINUE%{%TAN%Right-click in Act 5 town to open%NL%Requires level 75} // Not actually a map (yet); just being safe
 ItemDisplay[t49]: %PURPLE%+ %NAME% %PURPLE%[T4]%MAP-9B%%CONTINUE%{%TAN%Right-click in Act 5 town to open%NL%Requires level 75} // Not actually a map (yet); just being safe
 // Coloring maps names
-ItemDisplay[NMAG (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%WHITE%{%NAME%} // Coloring white maps
-ItemDisplay[MAG (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%BLUE%{%NAME%} // Coloring magic maps
-ItemDisplay[RARE (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%YELLOW%{%NAME%} // Coloring rare maps
+ItemDisplay[NMAG (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%WHITE%{%NAME%} // Coloring white maps
+ItemDisplay[MAG (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%BLUE%{%NAME%} // Coloring magic maps
+ItemDisplay[RARE (t10 OR t11 OR t12 OR t13 OR t14 OR t15 OR t16 OR t17 OR t18 OR t19 OR t20 OR t21 OR t22 OR t23 OR t24 OR t25 OR t26 OR t27 OR t28 OR t29 OR t30 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t38 OR t39 OR t40 OR t41 OR t42 OR t43 OR t44 OR t45 OR t46 OR t47 OR t48 OR t49 OR t60 OR t61 OR t62 OR t63 OR t64 OR t65 OR t66 OR t67 OR t68 OR t69)]: %NAME%%YELLOW%{%NAME%} // Coloring rare maps
 
 // ------------------------------------------------------------------------------
 // [DCLO] Diablo Clone Items
@@ -519,12 +516,14 @@ ItemDisplay[rtp]: %PURPLE%+ %RED%%NAME% %PURPLE%+%MAP-62% // Unlimited TP Tome
 // [IBVE] Vendor Items
 // ------------------------------------------------------------------------------
 // Amulets
-ItemDisplay[MAG (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR=10 amu]: %NAME% %GREEN%(2/10)%BLUE% // 2 class skills, 10 FCR amulet
-ItemDisplay[MAG (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR=20 amu]: %NAME% %GREEN%(2/20)%BLUE% // 2 class skills, 20 FCR amulet
-ItemDisplay[MAG (TABSK1>2 OR TABSK8>2 OR TABSK9>2 OR TABSK10>2 OR TABSK16>2 OR TABSK17>2 OR TABSK18>2 OR TABSK24>2 OR TABSK25>2 OR TABSK26>2 OR TABSK32>2 OR TABSK34>2 OR TABSK40>2 OR TABSK41>2 OR TABSK42>2 OR TABSK48>2 OR TABSK49>2 OR TABSK50>2) FCR>9 amu]: %NAME% %GREEN%(3/10)%BLUE% // 3 tab skills, 10 FCR amulet
-ItemDisplay[MAG (TABSK1>1 OR TABSK8>1 OR TABSK9>1 OR TABSK10>1 OR TABSK16>1 OR TABSK17>1 OR TABSK18>1 OR TABSK24>1 OR TABSK25>1 OR TABSK26>1 OR TABSK32>1 OR TABSK34>1 OR TABSK40>1 OR TABSK41>1 OR TABSK42>1 OR TABSK48>1 OR TABSK49>1 OR TABSK50>1) FCR>9 amu]: %NAME% %GREEN%(2/10)%BLUE% // 2 tab skills, 10 FCR amulet
+ItemDisplay[!UNI !SET (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR=10 amu]: %NAME% %GREEN%(2/10)%BLUE% // 2 class skills, 10 FCR amulet
+ItemDisplay[!UNI !SET  (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR=20 amu]: %NAME% %GREEN%(2/20)%BLUE% // 2 class skills, 20 FCR amulet
+ItemDisplay[!UNI !SET  (TABSK1>2 OR TABSK8>2 OR TABSK9>2 OR TABSK10>2 OR TABSK16>2 OR TABSK17>2 OR TABSK18>2 OR TABSK24>2 OR TABSK25>2 OR TABSK26>2 OR TABSK32>2 OR TABSK34>2 OR TABSK40>2 OR TABSK41>2 OR TABSK42>2 OR TABSK48>2 OR TABSK49>2 OR TABSK50>2) FCR>9 amu]: %NAME% %GREEN%(3/10)%BLUE% // 3 tab skills, 10 FCR amulet
+ItemDisplay[!UNI !SET  (TABSK1>2 OR TABSK8>2 OR TABSK9>2 OR TABSK10>2 OR TABSK16>2 OR TABSK17>2 OR TABSK18>2 OR TABSK24>2 OR TABSK25>2 OR TABSK26>2 OR TABSK32>2 OR TABSK34>2 OR TABSK40>2 OR TABSK41>2 OR TABSK42>2 OR TABSK48>2 OR TABSK49>2 OR TABSK50>2) amu]: %NAME% %GREEN%(3)%BLUE% // 3 tab skills
+ItemDisplay[!UNI !SET  (TABSK1>1 OR TABSK8>1 OR TABSK9>1 OR TABSK10>1 OR TABSK16>1 OR TABSK17>1 OR TABSK18>1 OR TABSK24>1 OR TABSK25>1 OR TABSK26>1 OR TABSK32>1 OR TABSK34>1 OR TABSK40>1 OR TABSK41>1 OR TABSK42>1 OR TABSK48>1 OR TABSK49>1 OR TABSK50>1) FCR>9 amu]: %NAME% %GREEN%(2/10)%BLUE% // 2 tab skills, 10 FCR amulet
 
 // Circlets
+ItemDisplay[MAG (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR>19 CIRC]: %NAME% %GREEN%(2/20)%BLUE% // +2 class skills, +20 FCR circlet
 ItemDisplay[MAG (CLSK0>1 OR CLSK1>1 OR CLSK2>1 OR CLSK3>1 OR CLSK4>1 OR CLSK5>1 OR CLSK6>1) FCR>19 CIRC]: %NAME% %GREEN%(2/20)%BLUE% // +2 class skills, +20 FCR circlet
 
 // Amazon Javelins
@@ -641,20 +640,6 @@ ItemDisplay[MAG CHSK72>0 WAND]: %NAME% %GREEN%(Weaken)%BLUE% // Weaken charges
 
 // +----------------------------------------------------------------------------+
 // |                                                                            |
-// |     [UNIQ] Unique Items                                                    |
-// |                                                                            |
-// +----------------------------------------------------------------------------+
-// ------------------------------------------------------------------------------
-// [UIMI] Unique Miscellaneous
-// ------------------------------------------------------------------------------
-// Upgrade recipes for Unique items
-ItemDisplay[UNI ID NORM ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Diamond%NL%Cube w/ Tal Rune, Shael%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[UNI ID EXC ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Diamond%NL%Cube w/ Ko Rune, Lem%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[UNI ID NORM WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Emerald%NL%Cube w/ Ral Rune, Sol%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[UNI ID EXC WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Emerald%NL%Cube w/ Lum Rune, Pul%NL%%ORANGE%Upgrade Recipe:}
-
-// +----------------------------------------------------------------------------+
-// |                                                                            |
 // |     [SETS] Set Items                                                       |
 // |                                                                            |
 // +----------------------------------------------------------------------------+
@@ -704,6 +689,7 @@ ItemDisplay[SET !ID (wsp OR kit OR crn)]: %NAME% %WHITE%- %DARK_GREEN%Milabrega
 ItemDisplay[SET !ID (tow OR hbl OR hbt OR gth OR ghm OR hgl)]: %NAME% %WHITE%- %DARK_GREEN%Sigon
 ItemDisplay[SET !ID (mpi OR bhm OR ful OR lbt)]: %NAME% %WHITE%- %DARK_GREEN%Tancred
 ItemDisplay[SET !ID (lbb OR lea OR tbt)]: %NAME% %WHITE%- %DARK_GREEN%Vidala
+
 // +----------------------------------------------------------------------------+
 // |                                                                            |
 // |     [RARI] Rare Items                                                      |
@@ -712,17 +698,13 @@ ItemDisplay[SET !ID (lbb OR lea OR tbt)]: %NAME% %WHITE%- %DARK_GREEN%Vidala
 // ------------------------------------------------------------------------------
 // [RIMI] Rare Miscellaneous
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE ID NORM ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Amethyst%NL%Cube w/ Ral Rune, Thul%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[RARE ID EXC ARMOR]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Amethyst%NL%Cube w/ Ko Rune, Pul%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[RARE ID NORM WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Sapphire%NL%Cube w/ Ort Rune, Amn%NL%%ORANGE%Upgrade Recipe:}
-ItemDisplay[RARE ID EXC WEAPON]: %NAME%%CONTINUE%{%TAN%Rune, & Perfect Sapphire%NL%Cube w/ Fal Rune, Um%NL%%ORANGE%Upgrade Recipe:}
+ItemDisplay[RARE ID NORM ARMOR]: %NAME%{%TAN%Rune, & Perfect Amethyst%NL%Cube w/ Ral Rune, Thul%NL%%ORANGE%Upgrade Recipe:}%CONTINUE%
+ItemDisplay[RARE ID EXC ARMOR]: %NAME%{%TAN%Rune, & Perfect Amethyst%NL%Cube w/ Ko Rune, Pul%NL%%ORANGE%Upgrade Recipe:}%CONTINUE%
+ItemDisplay[RARE ID NORM WEAPON]: %NAME%{%TAN%Rune, & Perfect Sapphire%NL%Cube w/ Ort Rune, Amn%NL%%ORANGE%Upgrade Recipe:}%CONTINUE%
+ItemDisplay[RARE ID EXC WEAPON]: %NAME%{%TAN%Rune, & Perfect Sapphire%NL%Cube w/ Fal Rune, Um%NL%%ORANGE%Upgrade Recipe:}%CONTINUE%
 
-// Temporary addition for S3 Start
-ItemDisplay[RARE ARMOR]: %NAME%%MAP-A8%{%NAME%} // All Rare armors
-ItemDisplay[RARE (SIN OR SOR OR ZON OR STAFF OR WAND OR SCEPTER OR MACE)]: %NAME%%MAP-A8%{%NAME%} // Rare caster weapons
-ItemDisplay[RARE ETH WEAPON !NORM]: %NAME%%MAP-A8%{%NAME%} // Rare Eth melee weapons
-ItemDisplay[RARE ETH WEAPON NORM CLVL<40]: %NAME%%MAP-A8%{%NAME%}
-ItemDisplay[RARE ETH WEAPON]:
+// --- Show all identified ---
+ItemDisplay[RARE ID]: %NAME%%MAP-A8%{%NAME%} // All identified rares
 
 // ------------------------------------------------------------------------------
 //      [RMAM] Amulets
@@ -730,13 +712,9 @@ ItemDisplay[RARE ETH WEAPON]:
 ItemDisplay[RARE !ID amu]: %NAME%%MAP-A8%{%NAME%} // All unidentified amulets
 
 // ------------------------------------------------------------------------------
-//      [RMCH] Charms
+//       [RMRI] Rings
 // ------------------------------------------------------------------------------
-
-// ------------------------------------------------------------------------------
-//      [RMCI] Circlets
-// ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CIRC]: %NAME%%MAP-A8%{%NAME%} // All unidentified Circlets
+ItemDisplay[RARE !ID rin]: %NAME%%MAP-A8%{%NAME%} // All unidentified rings
 
 // ------------------------------------------------------------------------------
 //      [RMJE] Jewels
@@ -754,9 +732,9 @@ ItemDisplay[RARE MINDMG>4 MAXDMG>9 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD}
 ItemDisplay[RARE STAT91=-15 (RES>7 OR ED>14 OR MAXDMG>7 OR MINDMG>6 OR STR>4 OR DEX>5) jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // -Requirements, and 8%+ All Resist, 15%+ Enhanced Damage, 8+ Maximum Damage, 7+ Minimum Damage, 5+ Strength, or 6+ Dexterity
 
 // ------------------------------------------------------------------------------
-//       [RMRI] Rings
+//      [RMCI] Circlets
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID rin]: %NAME%%MAP-A8%{%NAME%} // All unidentified rings
+ItemDisplay[RARE !ID CIRC]: %NAME%%MAP-A8%{%NAME%} // All unidentified Circlets
 
 // ------------------------------------------------------------------------------
 // [RICS] Rare Class Specific
@@ -764,44 +742,37 @@ ItemDisplay[RARE !ID rin]: %NAME%%MAP-A8%{%NAME%} // All unidentified rings
 // ------------------------------------------------------------------------------
 //     [RCAM] Amazon
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 ZON]: %NAME%%MAP-A8%{%NAME%} // Show all Amazon weapons before level 20
 ItemDisplay[RARE !ID ELT ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Amazon weapons
 
 // ------------------------------------------------------------------------------
 //     [RCAS] Assassin
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SIN]: %NAME%%MAP-A8%{%NAME%} // Show all Assassin Katars before level 20
 ItemDisplay[RARE !ID SIN]: %NAME%%MAP-A8%{%NAME%} // All Assassin Katars
 
 // ------------------------------------------------------------------------------
 //     [RCBA] Barbarian
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 BAR]: %NAME%%MAP-A8%{%NAME%} // Show all Barbarian helmets before level 20
 ItemDisplay[RARE !ID BAR]: %NAME%%MAP-A8%{%NAME%} // All Barbarian helmets
 
 // ------------------------------------------------------------------------------
 //     [RCDR] Druid
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 DRU]: %NAME%%MAP-A8%{%NAME%} // Show all Druid Pelts before level 20
 ItemDisplay[RARE !ID DRU]: %NAME%%MAP-A8%{%NAME%} // All Pelts
 
 // ------------------------------------------------------------------------------
 //     [RCNE] Necromancer
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 NEC]: %NAME%%MAP-A8%{%NAME%} // Show all Necromancer Heads before level 20
 ItemDisplay[RARE !ID NEC]: %NAME%%MAP-A8%{%NAME%} // All Heads
 
 // ------------------------------------------------------------------------------
 //     [RCPA] Paladin
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 DIN]: %NAME%%MAP-A8%{%NAME%} // Show all Paladin Shields before level 20
-ItemDisplay[RARE !ID DIN]: %NAME%%MAP-A8%{%NAME%} // All Paladin Shields
+//ItemDisplay[RARE !ID DIN]: %NAME%%MAP-A8%{%NAME%} // All Paladin Shields
 
 // ------------------------------------------------------------------------------
 //     [RCSO] Sorceress
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SOR]: %NAME%%MAP-A8%{%NAME%} // Show all Sorceress Orbs before level 20
-ItemDisplay[RARE !ID SOR]: %NAME%{%NAME%} // %MAP-A8% // All sorceress Orbs
+ItemDisplay[RARE !ID SOR]: %NAME%%MAP-A8%{%NAME%} // %MAP-A8% // All sorceress Orbs
 
 // ------------------------------------------------------------------------------
 // [RIAR] Rare Armor
@@ -809,57 +780,51 @@ ItemDisplay[RARE !ID SOR]: %NAME%{%NAME%} // %MAP-A8% // All sorceress Orbs
 // ------------------------------------------------------------------------------
 //     [RAAR] Armor
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 CHEST]: %NAME%%MAP-A8%{%NAME%} // Show all Armors before level 20
-ItemDisplay[RARE !ID ELT CHEST]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Armors
-
-ItemDisplay[RARE !ID xtp]: %NAME%%MAP-A8%{%NAME%} // Mage Plate
+//ItemDisplay[RARE !ID EXC CHEST]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Armors
+//ItemDisplay[RARE !ID ELT CHEST]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Armors
 
 // ------------------------------------------------------------------------------
 //     [RABE] Belts
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 BELT]: %NAME%%MAP-A8%{%NAME%} // Show all Belts before level 20
 ItemDisplay[RARE !ID BELT]: %NAME%%MAP-A8%{%NAME%} // All belts
 
 // ------------------------------------------------------------------------------
 //     [RABO] Boots
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 BOOTS]: %NAME%%MAP-A8%{%NAME%} // Show all Boots before level 20
 ItemDisplay[RARE !ID BOOTS]: %NAME%%MAP-A8%{%NAME%} // All boots
 
 // ------------------------------------------------------------------------------
 //     [RAGL] Gloves
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 GLOVES]: %NAME%%MAP-A8%{%NAME%} // Show all Gloves before level 20
 ItemDisplay[RARE !ID GLOVES]: %NAME%%MAP-A8%{%NAME%} // All gloves
 
 // ------------------------------------------------------------------------------
 //     [RAHE] Helms
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 HELM !BAR !DRU]: %NAME%%MAP-A8%{%NAME%} // Show all Helmets before level 20
-ItemDisplay[RARE !ID ELT HELM !BAR !DRU]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Helmets
+//ItemDisplay[RARE !ID EXC HELM !BAR !DRU]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Helmets
+//ItemDisplay[RARE !ID ELT HELM !BAR !DRU]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Helmets
 
 // ------------------------------------------------------------------------------
 //     [RASH] Shields
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SHIELD !DIN !NEC]: %NAME%%MAP-A8%{%NAME%} // Show all Shields before level 20
+ItemDisplay[RARE !ID SHIELD !DIN !NEC]: %NAME%%MAP-A8%{%NAME%}
 
 // ------------------------------------------------------------------------------
 // [RIRW] Rare Weapons
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID ETH WEAPON]: %NAME%%MAP-A8%{%NAME%} // Any Rare Eth weapon
+//ItemDisplay[RARE !ID ETH WEAPON]: %NAME%%MAP-A8%{%NAME%} // Any Rare Eth weapon
 
 // ------------------------------------------------------------------------------
 //     [RWAX] Axes
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 AXE !THROWING]: %NAME%%MAP-A8%{%NAME%} // Show all Axes before level 20
-ItemDisplay[RARE !ID EXC AXE !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Axes
-ItemDisplay[RARE !ID ELT AXE !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Axes
+//ItemDisplay[RARE !ID EXC AXE !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Axes
+//ItemDisplay[RARE !ID ELT AXE !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Axes
 
 // ------------------------------------------------------------------------------
 //     [RWBO] Bows
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 BOW !ZON]: %NAME%%MAP-A8%{%NAME%} // Show all Bows before level 20
-ItemDisplay[RARE !ID ELT BOW !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Bows
+//ItemDisplay[RARE !ID EXC BOW !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Bows
+//ItemDisplay[RARE !ID ELT BOW !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Bows
 
 // ------------------------------------------------------------------------------
 //     [RWCR] Crossbows
@@ -868,75 +833,73 @@ ItemDisplay[RARE !ID ELT BOW !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Bow
 // ------------------------------------------------------------------------------
 //     [RWDA] Daggers
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 DAGGER !THROWING]: %NAME%%MAP-A8%{%NAME%} // Show all Daggers before level 20
-ItemDisplay[RARE !ID ELT DAGGER !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Daggers
+//ItemDisplay[RARE !ID EXC DAGGER !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Daggers
+//ItemDisplay[RARE !ID ELT DAGGER !THROWING]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Daggers
 
 // ------------------------------------------------------------------------------
 //     [RWJA] Javelins
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // Show all Javelins before level 20
-ItemDisplay[RARE !ID EXC SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Javelins
-ItemDisplay[RARE !ID ELT SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Javelins
+//ItemDisplay[RARE !ID EXC SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Javelins
+//ItemDisplay[RARE !ID ELT SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Javelins
 
 // ------------------------------------------------------------------------------
 //     [RWMA] Maces
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 MACE]: %NAME%%MAP-A8%{%NAME%} // Show all Maces before level 20
+//ItemDisplay[RARE !ID EXC MACE]: %NAME%%MAP-A8%{%NAME%}
+//ItemDisplay[RARE !ID ELT MACE]: %NAME%%MAP-A8%{%NAME%}
 
 // ------------------------------------------------------------------------------
 //     [RWPO] Polearms
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 POLEARM]: %NAME%%MAP-A8%{%NAME%} // Show all Polearms before level 20
+//ItemDisplay[RARE !ID EXC POLEARM]: %NAME%%MAP-A8%{%NAME%}
+//ItemDisplay[RARE !ID ELT POLEARM]: %NAME%%MAP-A8%{%NAME%}
 
 // ------------------------------------------------------------------------------
 //     [RWSC] Scepters
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SCEPTER]: %NAME%%MAP-A8%{%NAME%} // Show all Scepters before level 20
 ItemDisplay[RARE !ID SCEPTER]: %NAME%%MAP-A8%{%NAME%} // All Scepters
 
 // ------------------------------------------------------------------------------
 //     [RWSP] Spears
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SPEAR !THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // Show all Spears before level 20
+//ItemDisplay[RARE !ID EXC SPEAR !THROWING !ZON]: %NAME%%MAP-A8%{%NAME%}
+//ItemDisplay[RARE !ID ELT SPEAR !THROWING !ZON]: %NAME%%MAP-A8%{%NAME%}
 
 // ------------------------------------------------------------------------------
 //     [RWST] Staves
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 STAFF]: %NAME%%MAP-A8%{%NAME%} // Show all Staves before level 20
 ItemDisplay[RARE !ID STAFF]: %NAME%%MAP-A8%{%NAME%} // All Staves
 
 // ------------------------------------------------------------------------------
 //     [RWSW] Swords
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 SWORD]: %NAME%%MAP-A8%{%NAME%} // Show all Swords before level 20
-ItemDisplay[RARE !ID EXC SWORD]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Swords
-ItemDisplay[RARE !ID ELT SWORD]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Swords
+//ItemDisplay[RARE !ID EXC SWORD]: %NAME%%MAP-A8%{%NAME%} // All Exceptional tier Swords
+//ItemDisplay[RARE !ID ELT SWORD]: %NAME%%MAP-A8%{%NAME%} // All Elite tier Swords
 
 // ------------------------------------------------------------------------------
 //     [RWTH] Throwing Weapons
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 !SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // Show all Throwing Weapons before level 20
-ItemDisplay[RARE !ID !SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Throwing Weapons
+//ItemDisplay[RARE !ID !SPEAR THROWING !ZON]: %NAME%%MAP-A8%{%NAME%} // All Throwing Weapons
 
 // ------------------------------------------------------------------------------
 //     [RWWA] Wands
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<20 WAND]: %NAME%%MAP-A8%{%NAME%} // Show all Wands before level 20
 ItemDisplay[RARE !ID WAND]: %NAME%%MAP-A8%{%NAME%} // All Wands
 
 // ------------------------------------------------------------------------------
 // [RIVE] Rare Items Vendor
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !RW PRICE>34999 DIFF<3]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // All difficulties
-ItemDisplay[RARE !RW PRICE>20000 DIFF<2]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // Normal & Nightmare difficulty
-ItemDisplay[RARE !RW PRICE>10000 DIFF<1]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // Normal difficulty
+ItemDisplay[RARE PRICE>34999 DIFF<3]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // All difficulties
+ItemDisplay[RARE PRICE>20000 DIFF<2]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // Normal & Nightmare difficulty
+ItemDisplay[RARE PRICE>10000 DIFF<1]: %DARK_GREEN%$ %YELLOW%%NAME%{%NAME%} // Normal difficulty
 
 // ------------------------------------------------------------------------------
 // [RIMA] Rare Items Master
 // ------------------------------------------------------------------------------
-ItemDisplay[RARE !ID CLVL<40]: %NAME%%MAP-A8%{%NAME%} // Show and notify for all rares until level 39
-ItemDisplay[RARE !ID CLVL<75 (EXC OR ELT)]: %NAME%%MAP-A8%{%NAME%} // Show and notify for all Exceptional and Elite tier rares until level 75
-ItemDisplay[RARE !ID CLVL>39]: //%NAME% // At level 40+, stop showing and notifying for all rares, and only show/notify for the ones uncommented above. Uncomment %NAME% in this line to show unwanted rares at level 40+
+ItemDisplay[RARE !ID CLVL>59 ILVL<56 (ARMOR OR WEAPON)]:
+ItemDisplay[RARE !ID CLVL>29 ILVL<20 (ARMOR OR WEAPON)]:
+
+
 
 // +----------------------------------------------------------------------------+
 // |                                                                            |
@@ -1193,13 +1156,13 @@ ItemDisplay[MAG !ID cm3]: %NAME%%MAP-97% // Grand Charms
 ItemDisplay[MAG !ID jew]: %NAME%%DOT-97% // All unidentified jewels
 
 // LLD Jewels - all jewels must be level required 1-30
-ItemDisplay[MAG LVLREQ<31 ED>19 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 20% Enhanced Damage
-ItemDisplay[MAG LVLREQ<31 ED>14 MAXDMG>12 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 15%+ Enhanced Damage and 13+ Maximum Damage
-ItemDisplay[MAG LVLREQ<31 MAXDMG>19 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 20+ Maximum Damage
-ItemDisplay[MAG LVLREQ<31 MINDMG>4 MAXDMG>13 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 5+ Minimum Damage and 13+ Maximum Damage
-ItemDisplay[MAG LVLREQ<31 RES>12 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // All Resist 13+
-ItemDisplay[MAG LVLREQ<31 RES>9 (STR>4 OR DEX>5) jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // All Resist 13+, and 5+ Strength or 6+ Dexterity
-ItemDisplay[MAG LVLREQ<31 STAT91=-15 (RES>10 OR ED>14 OR MAXDMG>7 OR MINDMG>6) jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // -Requirements, and 11%+ All Resist, 15%+ Enhanced Damage, 8+ Maximum Damage, or 7+ Minimum Damage
+ItemDisplay[MAG ED>19 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 20% Enhanced Damage
+ItemDisplay[MAG ED>14 MAXDMG>12 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 15%+ Enhanced Damage and 13+ Maximum Damage
+ItemDisplay[MAG MAXDMG>19 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 20+ Maximum Damage
+ItemDisplay[MAG MINDMG>4 MAXDMG>13 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // 5+ Minimum Damage and 13+ Maximum Damage
+ItemDisplay[MAG RES>12 jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // All Resist 13+
+ItemDisplay[MAG RES>9 (STR>4 OR DEX>5) jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // All Resist 13+, and 5+ Strength or 6+ Dexterity
+ItemDisplay[MAG STAT91=-15 (RES>10 OR ED>14 OR MAXDMG>7 OR MINDMG>6) jew]: %NAME%{%ORANGE%Note:%TAN% Good for LLD} // -Requirements, and 11%+ All Resist, 15%+ Enhanced Damage, 8+ Maximum Damage, or 7+ Minimum Damage
 
 // ------------------------------------------------------------------------------
 //      [MMCI] Circlets
@@ -1515,7 +1478,7 @@ ItemDisplay[MAG !RW PRICE>10000 DIFF<1]: %DARK_GREEN%$ %BLUE%%NAME%{%NAME%} // N
 // ------------------------------------------------------------------------------
 ItemDisplay[MAG !ID CLVL<30]: %NAME% // Show all magics until level 29
 ItemDisplay[MAG !ID CLVL<75 (EXC OR ELT)]: %NAME% // Show all Exceptional and Elite tier magics until level 60
-ItemDisplay[MAG !ID CLVL>29]: // At level 30+, stop showing and notifying for all magics, and only show and notify for the ones uncommented above
+ItemDisplay[MAG !ID CLVL>29 (ARMOR OR WEAPON)]: // At level 30+, stop showing and notifying for all magics ARMOR AND WEAPONS, and only show and notify for the ones uncommented above
 
 // +----------------------------------------------------------------------------+
 // |                                                                            |
@@ -2498,32 +2461,32 @@ ItemDisplay[NMAG !INF !RW SOCK=2 NEC]: %NAME%{%ORANGE%Rhyme, Splendor%NL%%TAN%Po
 ItemDisplay[NMAG !INF !RW CLVL<30 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Show and notify all Necromancer heads until character level 30
 
 // Curses
-ItemDisplay[NMAG !INF !RW !ETH SK66>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Amplify Damage
-ItemDisplay[NMAG !INF !RW !ETH SK76>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Iron Maiden
-ItemDisplay[NMAG !INF !RW !ETH SK82>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Life Tap
-ItemDisplay[NMAG !INF !RW !ETH SK87>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Decrepify
-ItemDisplay[NMAG !INF !RW !ETH SK91>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Lower Resist
-ItemDisplay[NMAG !INF !RW !ETH SK374>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Curse Mastery
-ItemDisplay[NMAG !INF !RW !ETH SK381>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Dark Pact
+ItemDisplay[NMAG !INF !RW !ETH SK66>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Amplify D.%GRAY%]%DOT-20%%PX-00%{%NAME%} // Amplify Damage
+ItemDisplay[NMAG !INF !RW !ETH SK76>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Iron M.%GRAY%]%DOT-20%%PX-00%{%NAME%} // Iron Maiden
+ItemDisplay[NMAG !INF !RW !ETH SK82>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Life Tap%GRAY%]%DOT-20%%PX-00%{%NAME%} // Life Tap
+ItemDisplay[NMAG !INF !RW !ETH SK87>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Decrepify%GRAY%]%DOT-20%%PX-00%{%NAME%} // Decrepify
+ItemDisplay[NMAG !INF !RW !ETH SK91>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Lower Resist%GRAY%]%DOT-20%%PX-00%{%NAME%} // Lower Resist
+ItemDisplay[NMAG !INF !RW !ETH SK374>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Curse Mastery%GRAY%]%DOT-20%%PX-00%{%NAME%} // Curse Mastery
+ItemDisplay[NMAG !INF !RW !ETH SK381>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Dark Pact%GRAY%]%DOT-20%%PX-00%{%NAME%} // Dark Pact
 
 // Poison and Bone
-ItemDisplay[NMAG !INF !RW !ETH SK67>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Teeth
-ItemDisplay[NMAG !INF !RW !ETH SK74>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Corpse Explosion
-ItemDisplay[NMAG !INF !RW !ETH SK84>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Bone Spear
-ItemDisplay[NMAG !INF !RW !ETH SK92>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Poison Nova
-ItemDisplay[NMAG !INF !RW !ETH SK93>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Bone Spirit
+ItemDisplay[NMAG !INF !RW !ETH SK67>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Teeth%GRAY%]%DOT-20%%PX-00%{%NAME%} // Teeth
+ItemDisplay[NMAG !INF !RW !ETH SK74>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Corpse Exp.%GRAY%]%DOT-20%%PX-00%{%NAME%} // Corpse Explosion
+ItemDisplay[NMAG !INF !RW !ETH SK84>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Bone Spear%GRAY%]%DOT-20%%PX-00%{%NAME%} // Bone Spear
+ItemDisplay[NMAG !INF !RW !ETH SK92>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Poison Nova%GRAY%]%DOT-20%%PX-00%{%NAME%} // Poison Nova
+ItemDisplay[NMAG !INF !RW !ETH SK93>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Bone Spirit%GRAY%]%DOT-20%%PX-00%{%NAME%} // Bone Spirit
 
 // Summoning
-ItemDisplay[NMAG !INF !RW !ETH SK69>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Skeleton Mastery
-ItemDisplay[NMAG !INF !RW !ETH SK70>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Raise Skeleton
-ItemDisplay[NMAG !INF !RW !ETH SK75>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Clay Golem
-ItemDisplay[NMAG !INF !RW !ETH SK79>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Golem Mastery
-ItemDisplay[NMAG !INF !RW !ETH SK80>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Skeletal Mage
-ItemDisplay[NMAG !INF !RW !ETH SK85>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Blood Golem
-ItemDisplay[NMAG !INF !RW !ETH SK89>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Raise Archer
-ItemDisplay[NMAG !INF !RW !ETH SK90>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Iron Golem
-ItemDisplay[NMAG !INF !RW !ETH SK94>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Fire Golem
-ItemDisplay[NMAG !INF !RW !ETH SK95>2 NEC]: %NAME%%DOT-20%%PX-00%{%NAME%} // Revive
+ItemDisplay[NMAG !INF !RW !ETH SK69>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Skeleton M.%GRAY%]%DOT-20%%PX-00%{%NAME%} // Skeleton Mastery
+ItemDisplay[NMAG !INF !RW !ETH SK70>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Raise Skele%GRAY%]%DOT-20%%PX-00%{%NAME%} // Raise Skeleton
+ItemDisplay[NMAG !INF !RW !ETH SK75>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Clay Golem%GRAY%]%DOT-20%%PX-00%{%NAME%} // Clay Golem
+ItemDisplay[NMAG !INF !RW !ETH SK79>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Golem Mastery%GRAY%]%DOT-20%%PX-00%{%NAME%} // Golem Mastery
+ItemDisplay[NMAG !INF !RW !ETH SK80>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Skeletal Mage%GRAY%]%DOT-20%%PX-00%{%NAME%} // Skeletal Mage
+ItemDisplay[NMAG !INF !RW !ETH SK85>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Blood Golem%GRAY%]%DOT-20%%PX-00%{%NAME%} // Blood Golem
+ItemDisplay[NMAG !INF !RW !ETH SK89>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Raise Archer%GRAY%]%DOT-20%%PX-00%{%NAME%} // Raise Archer
+ItemDisplay[NMAG !INF !RW !ETH SK90>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Iron Golem%GRAY%]%DOT-20%%PX-00%{%NAME%} // Iron Golem
+ItemDisplay[NMAG !INF !RW !ETH SK94>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Fire Golem%GRAY%]%DOT-20%%PX-00%{%NAME%} // Fire Golem
+ItemDisplay[NMAG !INF !RW !ETH SK95>2 NEC]: %NAME%%GRAY%[%DARK_GREEN%Revive%GRAY%]%DOT-20%%PX-00%{%NAME%} // Revive
 
 // ------------------------------------------------------------------------------
 //    [BCPA] Paladin
@@ -3027,6 +2990,9 @@ ItemDisplay[NMAG !INF !RW !ETH SK121>2 SCEPTER]: %NAME%%DOT-20%%PX-00%{%NAME%} /
 ItemDisplay[NMAG !INF !RW !ETH SK364>2 SCEPTER]: %NAME%%DOT-20%%PX-00%{%NAME%} // Holy Nova
 ItemDisplay[NMAG !INF !RW !ETH SK371>2 SCEPTER]: %NAME%%DOT-20%%PX-00%{%NAME%} // Holy Light
 
+
+ItemDisplay[NMAG !INF !RW !ETH SCEPTER (SK101>2 OR SK112>2 OR SK121>2 OR SK364>2 OR SK371>2 OR SK123>2 OR SK125>2 OR SK99)]: %NAME%{%NAME%}
+
 // ------------------------------------------------------------------------------
 //    [BWSP] Spears
 // ------------------------------------------------------------------------------
@@ -3214,11 +3180,11 @@ ItemDisplay[NMAG !INF !RW CLVL<30 WAND]: %NAME%%DOT-20%%PX-00%{%NAME%} // Shows 
 // Curses
 ItemDisplay[NMAG !INF !RW SK66>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Amp%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Amplify Damage
 ItemDisplay[NMAG !INF !RW SK76>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Iron M.%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Iron Maiden
-ItemDisplay[NMAG !INF !RW SK82>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%L. Tap%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Life Tap
+ItemDisplay[NMAG !INF !RW SK82>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Life Tap%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Life Tap
 ItemDisplay[NMAG !INF !RW SK87>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Decrep%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Decrepify
 ItemDisplay[NMAG !INF !RW SK91>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Lower Res%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Lower Resist
 ItemDisplay[NMAG !INF !RW SK374>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Curse M.%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Curse Mastery
-ItemDisplay[NMAG !INF !RW SK381>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%D. Pact%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Dark Pact
+ItemDisplay[NMAG !INF !RW SK381>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Dark Pact%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Dark Pact
 
 // Poison and Bone
 ItemDisplay[NMAG !INF !RW SK67>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Teeth%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Teeth
@@ -3230,12 +3196,12 @@ ItemDisplay[NMAG !INF !RW SK93>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%B. Spirit%GRAY
 // Summoning
 ItemDisplay[NMAG !INF !RW SK69>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Skele M.%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Skeleton Mastery
 ItemDisplay[NMAG !INF !RW SK70>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Skele%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Raise Skeleton
-ItemDisplay[NMAG !INF !RW SK75>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%C. Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Clay Golem
+ItemDisplay[NMAG !INF !RW SK75>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Clay Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Clay Golem
 ItemDisplay[NMAG !INF !RW SK79>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Golem M.%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Golem Mastery
 ItemDisplay[NMAG !INF !RW SK80>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Skele Mage%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Skeletal Mage
-ItemDisplay[NMAG !INF !RW SK85>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%B. Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Blood Golem
-ItemDisplay[NMAG !INF !RW SK90>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%I. Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Iron Golem
-ItemDisplay[NMAG !INF !RW SK94>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%F. Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Fire Golem
+ItemDisplay[NMAG !INF !RW SK85>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Blood Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Blood Golem
+ItemDisplay[NMAG !INF !RW SK90>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Iron Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Iron Golem
+ItemDisplay[NMAG !INF !RW SK94>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Fire Golem%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Fire Golem
 ItemDisplay[NMAG !INF !RW SK95>2 WAND]: %NAME% %GRAY%[%DARK_GREEN%Revive%GRAY%]%DOT-20%%PX-00%{%NAME%}%CONTINUE% // Revive
 
 ItemDisplay[NMAG !INF !RW (SOCK=0 OR SOCK=2) WAND (SK66>2 OR SK76>2 OR SK82>2 OR SK87>2 OR SK91>2 OR SK374>2 OR SK381>2 OR SK67>2 OR SK74>2 OR SK84>2 OR SK92>2 OR SK93>2 OR SK69>2 OR SK70>2 OR SK75>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK90>2 OR SK94>2 OR SK95>2)]: %NAME%{%NAME%}
